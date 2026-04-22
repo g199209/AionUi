@@ -199,6 +199,59 @@ describe('registerWebSocketUpgradeRouter', () => {
     expect(businessWss.handleUpgrade).not.toHaveBeenCalled();
   });
 
+  it('serializes array-valued response headers from the vite dev server', async () => {
+    const { server, getUpgradeHandler } = createMockServer();
+    const businessWss = {
+      handleUpgrade: vi.fn(),
+      emit: vi.fn(),
+    } as any;
+    const proxySocket = {
+      write: vi.fn(),
+      pipe: vi.fn(),
+      on: vi.fn(),
+      destroy: vi.fn(),
+    } as any;
+
+    requestMock.mockImplementation((options) => {
+      const handlers = new Map<string, (...args: any[]) => void>();
+      const proxyReq = {
+        on: vi.fn((event: string, handler: (...args: any[]) => void) => {
+          handlers.set(event, handler);
+          return proxyReq;
+        }),
+        end: vi.fn(() => {
+          handlers.get('upgrade')?.(
+            {
+              httpVersion: '1.1',
+              statusCode: 101,
+              statusMessage: 'Switching Protocols',
+              headers: {
+                connection: 'Upgrade',
+                upgrade: 'websocket',
+                'set-cookie': ['a=1; Path=/', 'b=2; Path=/'],
+              },
+            },
+            proxySocket,
+            Buffer.alloc(0)
+          );
+        }),
+      };
+
+      return proxyReq as any;
+    });
+
+    const { registerWebSocketUpgradeRouter } = await import('../../../src/process/webserver/websocket/upgradeRouter');
+    registerWebSocketUpgradeRouter(server, businessWss);
+
+    const req = { url: WEBUI_VITE_HMR_PATH, method: 'GET', headers: { upgrade: 'websocket' } };
+    const socket = createMockSocket();
+    getUpgradeHandler()(req, socket, Buffer.alloc(0));
+
+    const firstWrite = (socket.write as ReturnType<typeof vi.fn>).mock.calls[0]?.[0] as string;
+    expect(firstWrite).toContain('set-cookie: a=1; Path=/');
+    expect(firstWrite).toContain('set-cookie: b=2; Path=/');
+  });
+
   it('returns bad gateway when the vite proxy request fails', async () => {
     const { server, getUpgradeHandler } = createMockServer();
     const businessWss = {
@@ -233,20 +286,33 @@ describe('registerWebSocketUpgradeRouter', () => {
   });
 
   it('rejects unknown websocket upgrade paths', async () => {
-    const { server, getUpgradeHandler } = createMockServer();
-    const businessWss = {
-      handleUpgrade: vi.fn(),
-      emit: vi.fn(),
-    } as any;
+    const originalBaseUrl = process.env.SERVER_BASE_URL;
+    process.env.SERVER_BASE_URL = '::not-a-url';
 
-    const { registerWebSocketUpgradeRouter } = await import('../../../src/process/webserver/websocket/upgradeRouter');
-    registerWebSocketUpgradeRouter(server, businessWss);
+    try {
+      vi.resetModules();
 
-    const socket = createMockSocket();
-    getUpgradeHandler()({ url: '/unexpected' }, socket, Buffer.alloc(0));
+      const { server, getUpgradeHandler } = createMockServer();
+      const businessWss = {
+        handleUpgrade: vi.fn(),
+        emit: vi.fn(),
+      } as any;
 
-    expect(socket.destroy).toHaveBeenCalled();
-    expect(businessWss.handleUpgrade).not.toHaveBeenCalled();
-    expect(requestMock).not.toHaveBeenCalled();
+      const { registerWebSocketUpgradeRouter } = await import('../../../src/process/webserver/websocket/upgradeRouter');
+      registerWebSocketUpgradeRouter(server, businessWss);
+
+      const socket = createMockSocket();
+      getUpgradeHandler()({ url: '/unexpected' }, socket, Buffer.alloc(0));
+
+      expect(socket.destroy).toHaveBeenCalled();
+      expect(businessWss.handleUpgrade).not.toHaveBeenCalled();
+      expect(requestMock).not.toHaveBeenCalled();
+    } finally {
+      if (originalBaseUrl === undefined) {
+        delete process.env.SERVER_BASE_URL;
+      } else {
+        process.env.SERVER_BASE_URL = originalBaseUrl;
+      }
+    }
   });
 });
