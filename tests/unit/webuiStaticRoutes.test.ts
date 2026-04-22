@@ -12,8 +12,18 @@ function createPackagedRendererRoot(): string {
   const rendererDir = path.join(root, 'out', 'renderer');
   fs.mkdirSync(rendererDir, { recursive: true });
   fs.writeFileSync(path.join(rendererDir, 'index.html'), '<!doctype html><html><body>ok</body></html>', 'utf8');
+  const staticDir = path.join(rendererDir, 'static');
+  fs.mkdirSync(staticDir, { recursive: true });
+  fs.writeFileSync(path.join(staticDir, 'hello.txt'), 'hello', 'utf8');
   tempDirs.push(root);
   return root;
+}
+
+function countStaticMiddlewareLayers(app: express.Express): number {
+  const stack = (app as unknown as { router?: { stack: unknown[] } }).router?.stack;
+  if (!stack) return 0;
+
+  return stack.filter((layer) => (layer as { name?: string }).name === 'serveStatic').length;
 }
 
 function getRegisteredGetRoutePaths(app: express.Express): Array<string | RegExp> {
@@ -66,6 +76,10 @@ describe('registerStaticRoutes', () => {
     registerStaticRoutes(app);
 
     expect(getRegisteredGetRoutePaths(app)).not.toContain('/favicon.ico');
+    // With `out/renderer/static/` present, `registerStaticRoutes` should register:
+    // - one `serveStatic` for the renderer root
+    // - an additional `serveStatic` for `/static/*`
+    expect(countStaticMiddlewareLayers(app)).toBe(2);
   });
 
   it('proxies dev requests to the renderer port from ELECTRON_RENDERER_URL', async () => {

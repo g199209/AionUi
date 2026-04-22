@@ -33,6 +33,14 @@ describe('viteDevServer', () => {
     expect(VITE_DEV_PORT).toBe(6123);
   });
 
+  it('falls back to 5173 when ELECTRON_RENDERER_URL is an empty string', async () => {
+    process.env['ELECTRON_RENDERER_URL'] = '';
+
+    const { VITE_DEV_PORT } = await import('../../../src/process/webserver/viteDevServer');
+
+    expect(VITE_DEV_PORT).toBe(5173);
+  });
+
   it('falls back to 5173 when ELECTRON_RENDERER_URL is invalid', async () => {
     process.env['ELECTRON_RENDERER_URL'] = 'not-a-valid-url';
 
