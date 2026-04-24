@@ -145,12 +145,7 @@ describe('TeamMcpServer', () => {
   let taskManager: ReturnType<typeof makeTaskManager>;
   let agents: TeamAgent[];
   let wakeAgent: (slotId: string) => Promise<void>;
-  let spawnAgent: (
-    agentName: string,
-    agentType?: string,
-    model?: string,
-    customAgentId?: string
-  ) => Promise<TeamAgent>;
+  let spawnAgent: (agentName: string, agentType?: string, model?: string, customAgentId?: string) => Promise<TeamAgent>;
   let renameAgent: (slotId: string, newName: string) => void;
   let removeAgent: (slotId: string) => void;
   let authToken: string;
@@ -166,9 +161,7 @@ describe('TeamMcpServer', () => {
     taskManager = makeTaskManager();
     wakeAgent = vi.fn<(slotId: string) => Promise<void>>().mockResolvedValue(undefined);
     spawnAgent = vi
-      .fn<
-        (agentName: string, agentType?: string, model?: string, customAgentId?: string) => Promise<TeamAgent>
-      >()
+      .fn<(agentName: string, agentType?: string, model?: string, customAgentId?: string) => Promise<TeamAgent>>()
       .mockResolvedValue(makeAgent({ slotId: 'slot-new', agentName: 'NewBot' }));
     renameAgent = vi.fn<(slotId: string, newName: string) => void>();
     removeAgent = vi.fn<(slotId: string) => void>();
