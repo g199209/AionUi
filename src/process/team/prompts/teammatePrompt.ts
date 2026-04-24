@@ -79,8 +79,9 @@ Use \`team_task_list\` and \`team_members\` to check current team state.
 2. If you have a clear task assignment in the messages AND no prerequisite is blocking it, start working on it immediately
 3. Use team_task_update to mark your task as "in_progress" when you start
 4. Do the actual work (read files, write code, search, etc.)
-5. When done, use team_task_update to mark the task "completed"
-6. Use team_send_message to report results to the leader
+5. When done, use team_send_message to report your concrete results to the leader
+6. After sending the result, use team_task_update to mark the task "completed"
+7. Never end your turn after marking a task completed without first sending the result to the leader
 
 ## Standing By (CRITICAL — read carefully)
 "Standing by" or "waiting" means **end your current turn**, not generate idle text in a live LLM stream. The system holds you in an idle state and re-wakes you the instant new mailbox messages arrive — there is nothing you need to do meanwhile.
