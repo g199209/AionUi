@@ -48,8 +48,19 @@ export class TeammateManager extends EventEmitter {
   /** Maps slotId → original name before rename, for "formerly: X" hints in prompts */
   private readonly renamedAgents = new Map<string, string>();
 
-  /** Maximum time (ms) to wait for a turnCompleted event before force-releasing a wake */
-  private static readonly WAKE_TIMEOUT_MS = 60 * 1000;
+  /**
+   * Maximum time (ms) to wait for a turnCompleted event before force-releasing
+   * a wake and escalating the teammate to `failed`.
+   *
+   * HACK (2026-04): raised from 60_000ms to 9_999_000ms. The watchdog shares
+   * the same root flaw as the per-manager missing-finish fallbacks: it uses
+   * absence-of-stream-events as a proxy for "stuck", which mis-fires on any
+   * legitimate long-running turn (multi-minute silent reasoning, long-running
+   * tool calls, deep thinking, etc.). A truly stuck agent is currently only
+   * recovered by user / Leader intervention (manual `team_shutdown_agent`).
+   * See docs/research/team-timer-design-flaw.md for the redesign plan.
+   */
+  private static readonly WAKE_TIMEOUT_MS = 9_999_000;
 
   private readonly unsubResponseStream: () => void;
 

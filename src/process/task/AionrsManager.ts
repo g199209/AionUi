@@ -90,7 +90,14 @@ export class AionrsManager extends BaseAgentManager<AionrsManagerData, string> {
 
   // Finish fallback state
   private missingFinishFallbackTimer: ReturnType<typeof setTimeout> | null = null;
-  private readonly missingFinishFallbackDelayMs = 15000;
+  // HACK (2026-04): raised from 15_000ms to 9_999_000ms to unblock long-running
+  // team tasks (multi-minute silent reasoning, long tool calls). The timer-based
+  // "synthesize a finish after N seconds of silence" approach cannot distinguish
+  // "still thinking" from "truly stuck" and causes Leader to receive a fake
+  // "Turn completed" notification mid-prompt.
+  // See docs/research/team-timer-design-flaw.md for the full analysis and the
+  // planned redesign — this is a temporary muzzle, not a real fix.
+  private readonly missingFinishFallbackDelayMs = 9_999_000;
 
   // Thinking state
   private thinkingMsgId: string | null = null;

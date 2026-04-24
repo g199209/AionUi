@@ -1,0 +1,1531 @@
+(base) ➜  AionUi git:(develop) bun run webui:remote
+$ rm -rf out/renderer && electron-vite dev -- --webui --remote
+vite v6.4.1 building SSR bundle for development...
+✓ 730 modules transformed.
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/utils/configureChromium.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/index.ts, /Users/gmf/AionUi/src/process/bridge/applicationBridge.ts, /Users/gmf/AionUi/src/process/index.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/services/database/index.ts is dynamically imported by /Users/gmf/AionUi/src/process/agent/AgentRegistry.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts, /Users/gmf/AionUi/src/process/utils/tray.ts but also statically imported by /Users/gmf/AionUi/src/process/agent/remote/RemoteAgentCore.ts, /Users/gmf/AionUi/src/process/bridge/fsBridge.ts, /Users/gmf/AionUi/src/process/bridge/migrationUtils.ts, /Users/gmf/AionUi/src/process/bridge/remoteAgentBridge.ts, /Users/gmf/AionUi/src/process/channels/agent/ChannelMessageService.ts, /Users/gmf/AionUi/src/process/channels/core/ChannelManager.ts, /Users/gmf/AionUi/src/process/channels/core/SessionManager.ts, /Users/gmf/AionUi/src/process/channels/gateway/ActionExecutor.ts, /Users/gmf/AionUi/src/process/channels/gateway/PluginManager.ts, /Users/gmf/AionUi/src/process/channels/pairing/PairingService.ts, /Users/gmf/AionUi/src/process/channels/utils/channelSendProtocol.ts, /Users/gmf/AionUi/src/process/services/cron/CronStore.ts, /Users/gmf/AionUi/src/process/services/database/SqliteChannelRepository.ts, /Users/gmf/AionUi/src/process/services/database/SqliteConversationRepository.ts, /Users/gmf/AionUi/src/process/services/database/export.ts, /Users/gmf/AionUi/src/process/task/AcpAgentManager.ts, /Users/gmf/AionUi/src/process/task/AionrsManager.ts, /Users/gmf/AionUi/src/process/task/ConversationTurnCompletionService.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts, /Users/gmf/AionUi/src/process/task/OpenClawAgentManager.ts, /Users/gmf/AionUi/src/process/task/RemoteAgentManager.ts, /Users/gmf/AionUi/src/process/team/mcp/guide/TeamGuideMcpServer.ts, /Users/gmf/AionUi/src/process/team/repository/SqliteTeamRepository.ts, /Users/gmf/AionUi/src/process/webserver/routes/apiRoutes.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/utils/initStorage.ts is dynamically imported by /Users/gmf/AionUi/src/process/bridge/fsBridge.ts, /Users/gmf/AionUi/src/process/bridge/fsBridge.ts, /Users/gmf/AionUi/src/process/utils/zoom.ts but also statically imported by /Users/gmf/AionUi/src/index.ts, /Users/gmf/AionUi/src/process/acp/compat/AcpAgentV2.ts, /Users/gmf/AionUi/src/process/agent/acp/AcpDetector.ts, /Users/gmf/AionUi/src/process/bridge/applicationBridge.ts, /Users/gmf/AionUi/src/process/bridge/applicationBridgeCore.ts, /Users/gmf/AionUi/src/process/bridge/conversationBridge.ts, /Users/gmf/AionUi/src/process/bridge/databaseBridge.ts, /Users/gmf/AionUi/src/process/bridge/fsBridge.ts, /Users/gmf/AionUi/src/process/bridge/migrationUtils.ts, /Users/gmf/AionUi/src/process/bridge/modelBridge.ts, /Users/gmf/AionUi/src/process/bridge/notificationBridge.ts, /Users/gmf/AionUi/src/process/bridge/services/ConversationSideQuestionService.ts, /Users/gmf/AionUi/src/process/bridge/services/SpeechToTextService.ts, /Users/gmf/AionUi/src/process/bridge/systemSettingsBridge.ts, /Users/gmf/AionUi/src/process/channels/actions/SystemActions.ts, /Users/gmf/AionUi/src/process/channels/gateway/ActionExecutor.ts, /Users/gmf/AionUi/src/process/index.ts, /Users/gmf/AionUi/src/process/pet/petConfirmManager.ts, /Users/gmf/AionUi/src/process/services/cron/CronService.ts, /Users/gmf/AionUi/src/process/services/cron/WorkerTaskManagerJobExecutor.ts, /Users/gmf/AionUi/src/process/services/cron/cronSkillFile.ts, /Users/gmf/AionUi/src/process/services/i18n/index.ts, /Users/gmf/AionUi/src/process/services/mcpServices/agents/AionuiMcpAgent.ts, /Users/gmf/AionUi/src/process/services/previewHistoryService.ts, /Users/gmf/AionUi/src/process/task/AcpAgentManager.ts, /Users/gmf/AionUi/src/process/task/AcpSkillManager.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts, /Users/gmf/AionUi/src/process/task/WorkerTaskManager.ts, /Users/gmf/AionUi/src/process/task/agentUtils.ts, /Users/gmf/AionUi/src/process/team/TeamSessionService.ts, /Users/gmf/AionUi/src/process/team/TeammateManager.ts, /Users/gmf/AionUi/src/process/team/mcp/guide/TeamGuideMcpServer.ts, /Users/gmf/AionUi/src/process/team/mcp/modelListHandler.ts, /Users/gmf/AionUi/src/process/team/mcp/team/TeamMcpServer.ts, /Users/gmf/AionUi/src/process/team/prompts/teamGuideAssistant.ts, /Users/gmf/AionUi/src/process/team/prompts/teamGuideCapability.ts, /Users/gmf/AionUi/src/process/utils/initAgent.ts, /Users/gmf/AionUi/src/process/utils/message.ts, /Users/gmf/AionUi/src/process/utils/webuiConfig.ts, /Users/gmf/AionUi/src/process/webserver/routes/apiRoutes.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/team/mcp/guide/teamGuideSingleton.ts is dynamically imported by /Users/gmf/AionUi/src/process/task/AionrsManager.ts but also statically imported by /Users/gmf/AionUi/src/process/acp/compat/AcpAgentV2.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts, /Users/gmf/AionUi/src/process/utils/initBridge.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/team/mcpReadiness.ts is dynamically imported by /Users/gmf/AionUi/src/process/task/AionrsManager.ts but also statically imported by /Users/gmf/AionUi/src/process/acp/compat/AcpAgentV2.ts, /Users/gmf/AionUi/src/process/team/mcp/team/TeamMcpServer.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/team/prompts/teamGuideCapability.ts is dynamically imported by /Users/gmf/AionUi/src/process/task/AionrsManager.ts but also statically imported by /Users/gmf/AionUi/src/process/acp/compat/AcpAgentV2.ts, /Users/gmf/AionUi/src/process/task/AcpAgentManager.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/services/cron/cronSkillFile.ts is dynamically imported by /Users/gmf/AionUi/src/process/services/cron/SkillSuggestWatcher.ts, /Users/gmf/AionUi/src/process/services/cron/WorkerTaskManagerJobExecutor.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/cronBridge.ts, /Users/gmf/AionUi/src/process/services/cron/CronService.ts, /Users/gmf/AionUi/src/process/services/cron/SkillSuggestWatcher.ts, /Users/gmf/AionUi/src/process/services/cron/WorkerTaskManagerJobExecutor.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/task/AcpSkillManager.ts is dynamically imported by /Users/gmf/AionUi/src/process/bridge/fsBridge.ts, /Users/gmf/AionUi/src/process/bridge/fsBridge.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/conversationBridge.ts, /Users/gmf/AionUi/src/process/services/cron/WorkerTaskManagerJobExecutor.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts, /Users/gmf/AionUi/src/process/task/agentUtils.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/team/prompts/teamGuidePrompt.ts is dynamically imported by /Users/gmf/AionUi/src/process/task/AcpAgentManager.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts but also statically imported by /Users/gmf/AionUi/src/process/task/agentUtils.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/team/prompts/teamGuideAssistant.ts is dynamically imported by /Users/gmf/AionUi/src/process/task/AcpAgentManager.ts, /Users/gmf/AionUi/src/process/task/GeminiAgentManager.ts but also statically imported by /Users/gmf/AionUi/src/process/task/agentUtils.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/services/i18n/index.ts is dynamically imported by /Users/gmf/AionUi/src/process/bridge/updateBridge.ts, /Users/gmf/AionUi/src/process/services/autoUpdaterService.ts but also statically imported by /Users/gmf/AionUi/src/index.ts, /Users/gmf/AionUi/src/process/bridge/systemSettingsBridge.ts, /Users/gmf/AionUi/src/process/channels/gateway/ActionExecutor.ts, /Users/gmf/AionUi/src/process/channels/plugins/weixin/WeixinMonitor.ts, /Users/gmf/AionUi/src/process/index.ts, /Users/gmf/AionUi/src/process/pet/petConfirmManager.ts, /Users/gmf/AionUi/src/process/pet/petManager.ts, /Users/gmf/AionUi/src/process/services/cron/CronService.ts, /Users/gmf/AionUi/src/process/utils/tray.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/services/cron/cronServiceSingleton.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/cronBridge.ts, /Users/gmf/AionUi/src/process/services/ConversationServiceImpl.ts, /Users/gmf/AionUi/src/process/task/MessageMiddleware.ts, /Users/gmf/AionUi/src/process/utils/initBridge.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/services/conversationServiceSingleton.ts is dynamically imported by /Users/gmf/AionUi/src/process/services/cron/WorkerTaskManagerJobExecutor.ts but also statically imported by /Users/gmf/AionUi/src/process/channels/actions/SystemActions.ts, /Users/gmf/AionUi/src/process/channels/gateway/ActionExecutor.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/channels/core/ChannelManager.ts is dynamically imported by /Users/gmf/AionUi/src/process/bridge/conversationBridge.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/channelBridge.ts, /Users/gmf/AionUi/src/process/channels/actions/SystemActions.ts, /Users/gmf/AionUi/src/process/channels/index.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/services/autoUpdaterService.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/updateBridge.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/bridge/updateBridge.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/index.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/webserver/adapter.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/webuiBridge.ts, /Users/gmf/AionUi/src/process/webserver/index.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/bridge/pptPreviewBridge.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/index.ts, /Users/gmf/AionUi/src/process/webserver/routes/apiRoutes.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/bridge/officeWatchBridge.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/index.ts, /Users/gmf/AionUi/src/process/webserver/routes/apiRoutes.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/webserver/index.ts is dynamically imported by /Users/gmf/AionUi/src/process/bridge/services/WebuiService.ts but also statically imported by /Users/gmf/AionUi/src/index.ts, /Users/gmf/AionUi/src/process/bridge/webuiBridge.ts, /Users/gmf/AionUi/src/process/utils/webuiConfig.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /Users/gmf/AionUi/src/process/bridge/webuiBridge.ts is dynamically imported by /Users/gmf/AionUi/src/index.ts but also statically imported by /Users/gmf/AionUi/src/process/bridge/index.ts, /Users/gmf/AionUi/src/process/utils/webuiConfig.ts, dynamic import will not move module into another chunk.
+
+out/main/chunks/BetterSqlite3Driver-BI766XRT.js            0.88 kB │ map:     2.14 kB
+out/main/chunks/BunSqliteDriver-CxFBx-d0.js                1.15 kB │ map:     3.37 kB
+out/main/lifecycleRunner.js                                2.01 kB │ map:     4.69 kB
+out/main/gemini.js                                         3.20 kB │ map:     6.61 kB
+out/main/chunks/index-DmyfPMeM.js                          4.33 kB │ map:     0.22 kB
+out/main/chunks/testCustomAgentConnection-BtpeeF2r.js      4.49 kB │ map:     3.60 kB
+out/main/chunks/resetPasswordCLI-BsMR7nJ2.js               7.30 kB │ map:     9.36 kB
+out/main/chunks/index-Dq2JoE7P.js                         28.13 kB │ map:    57.96 kB
+out/main/chunks/petManager-BEsUuEg_.js                    34.15 kB │ map:    75.17 kB
+out/main/chunks/index-DZsZN44U.js                        144.65 kB │ map:   328.10 kB
+out/main/index.js                                      3,345.36 kB │ map: 4,975.58 kB
+✓ built in 2.26s
+
+electron main process built successfully
+
+-----
+
+vite v6.4.1 building SSR bundle for development...
+✓ 5 modules transformed.
+out/preload/petPreload.js         0.50 kB
+out/preload/petHitPreload.js      0.67 kB
+out/preload/petConfirmPreload.js  0.97 kB
+out/preload/index.js              2.96 kB
+✓ built in 28ms
+
+electron preload scripts built successfully
+
+-----
+
+dev server running for the electron renderer process at:
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  UnoCSS Inspector: http://localhost:5173/__unocss/
+
+starting electron app...
+
+build.buildStorage global
+build.buildStorage system
+[CDP] Chrome DevTools Protocol enabled
+[CDP] Remote debugging port: 9230
+[CDP] DevTools URL: http://127.0.0.1:9230
+[CDP] MCP chrome-devtools connection: --browser-url=http://127.0.0.1:9230
+14:16:50.795 › build.buildStorage agent.chat
+14:16:50.797 › build.buildStorage agent.chat.message
+14:16:50.797 › build.buildStorage agent.config
+14:16:50.797 › build.buildStorage agent.env
+14:16:50.806 › Update channel set to: latest-arm64
+14:16:50.810 › [security] Generated random CSRF secret for this session
+14:16:50.816 › [ChannelBridge] Initializing...
+14:16:50.816 › [ChannelBridge] Initialized
+14:16:51.508 › [Database] Schema initialized successfully
+14:16:51.512 › [TeamGuideMcpServer] TCP server started on port 58255
+
+DevTools listening on ws://127.0.0.1:9230/devtools/browser/308c305a-d181-4f8f-bb5e-78bf5c49288c
+14:16:51.604 › [AionUi:ready] start +0ms
+14:16:51.606 › (electron) 'session.getAllExtensions' is deprecated and will be removed. Please use 'session.extensions.getAllExtensions' instead.
+14:16:51.606 › (electron) 'session.loadExtension' is deprecated and will be removed. Please use 'session.extensions.loadExtension' instead.
+14:16:51.633 › [DevTools] React Developer Tools installed
+14:16:51.662 › [AionUi:init] start +0ms
+14:16:51.663 › [AionUi:init] 1. migrateLegacyData +1ms
+14:16:51.663 › [AionUi:init] 3. storage interceptors +1ms
+14:16:51.663 › [AionUi:init] 4.1 MCP defaults +1ms
+14:16:51.664 › [AionUi:init] 4.2 builtinMcpServers +1ms
+14:16:51.760 › 
+[AionUi:env] ════════════════════════════════════════════════════
+[AionUi:env]   AionUi v1.9.19 (development)
+[AionUi:env]   OS       : darwin 23.3.0 (arm64)
+[AionUi:env]   Electron : 37.10.3
+[AionUi:env]   Chromium : 138.0.7204.251
+[AionUi:env]   Node     : v22.21.1 (built-in)
+[AionUi:env]   execPath : /Users/gmf/AionUi/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron
+[AionUi:env]   node     : v24.7.0  (/opt/homebrew/bin/node)
+[AionUi:env]   npm      : 11.5.1  (/opt/homebrew/bin/npm)
+[AionUi:env]   npx      : 11.5.1  (/opt/homebrew/bin/npx)
+[AionUi:env]   git      : git version 2.39.2 (Apple Git-143)  (/usr/bin/git)
+[AionUi:env]   Memory   : 32.00 GB total, 236 MB free
+[AionUi:env]   Locale   : en-US
+[AionUi:env]   Shell    : /bin/zsh
+[AionUi:env]   userData : /Users/gmf/Library/Application Support/AionUi-Dev
+[AionUi:env]   logFile  : /Users/gmf/Library/Logs/AionUi-Dev
+[AionUi:env]   PATH     : /Users/gmf/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.securit
+[AionUi:env] ════════════════════════════════════════════════════
+14:16:51.804 › [AionUi:init] 5.1 initBuiltinAssistantRules +141ms
+14:16:51.804 › [AionUi:init] 5.2 assistant config + migrations +142ms
+14:16:51.806 › [AionUi:init] 6. database +143ms
+14:16:51.806 › [AionUi:init] done +144ms
+14:16:51.806 › [AionUi:process] initStorage +144ms
+14:16:51.806 › [Extensions] Initializing extension registry...
+14:16:51.808 › [Extensions] Registry initialized in 2ms: 0 extension(s), 0 adapter(s), 0 MCP server(s), 0 assistant(s), 0 agent(s), 0 skill(s), 0 theme(s), 0 channel plugin(s), 0 webui contribution(s), 0 settings tab(s), 0 model provider(s), 0 i18n locale(s)
+14:16:51.808 › [AionUi:process] ExtensionRegistry +146ms
+14:16:51.808 › [ChannelManager] Initializing...
+14:16:51.808 › [ChannelManager] Initialized successfully
+14:16:51.808 › [AionUi:process] ChannelManager +146ms
+14:16:51.808 › [AionUi:ready] initializeProcess +204ms
+14:16:51.809 › [AionUi:ready] initializeZoomFactor +205ms
+14:16:51.810 › [CORS] Added IP to allowed origins: http://10.3.2.161:25809
+14:16:51.811 › [WebUI] No renderer build found, proxying to Vite dev server at http://localhost:5173
+14:16:51.813 › 
+   🚀 Local access / 本地访问: http://localhost:25809
+14:16:51.813 ›    🚀 Network access / 网络访问: http://10.3.2.161:25809
+
+14:16:51.813 › [WebSocketManager] Initialized
+14:16:51.814 › [AgentRegistry] Starting agent detection...
+14:16:51.866 › [AcpDetector] CLI not found: [claude, qwen, codebuddy, goose, auggie, kimi, opencode, droid, copilot, qodercli, vibe-acp, kiro-cli, hermes, snow]. PATH(667 chars): /Users/gmf/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/Applications/VMware Fusion.app/Contents/Public:/Users/gmf/AionUi/node_modules/.bin:/Use
+14:16:51.873 › [AgentRegistry] Completed in 59ms, found 6 agents: Aion CLI, Gemini CLI, Codex, Cursor Agent, OpenClaw, Claude
+14:16:51.877 › [CDP] Remote debugging server ready at http://127.0.0.1:9230
+14:16:51.877 › [CDP] MCP chrome-devtools: npx chrome-devtools-mcp@0.16.0 --browser-url=http://127.0.0.1:9230
+14:16:53.749 › [2026-04-23T06:16:53.749Z] GET /api/auth/user - 10.3.2.161
+14:16:53.751 › [2026-04-23T06:16:53.751Z] GET /api/auth/user - 403 - 2ms
+14:16:59.760 › [2026-04-23T06:16:59.760Z] POST /login - 10.3.2.161
+14:17:00.068 › [2026-04-23T06:17:00.068Z] POST /login - 200 - 308ms
+14:17:00.070 › [WebSocketManager] Client connected
+14:17:02.033 › [fsBridge] Listed 4 builtin auto-injected skills
+14:17:27.596 › [setupAssistantWorkspace] Symlinked builtin skill: aionui-skills -> /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.aionrs/skills/aionui-skills
+14:17:27.597 › [setupAssistantWorkspace] Symlinked builtin skill: cron -> /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.aionrs/skills/cron
+14:17:27.598 › [setupAssistantWorkspace] Symlinked builtin skill: office-cli -> /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.aionrs/skills/office-cli
+14:17:27.598 › [setupAssistantWorkspace] Symlinked builtin skill: skill-creator -> /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.aionrs/skills/skill-creator
+14:17:28.396 › [TeamMcpServer] Team bbd874d1-ec2b-4879-a708-a16fc55da4d1 TCP server started on port 58333
+14:17:28.420 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:17:28.448 › [aionrs] [mcp] AddMcpServer received: name=aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1, transport=stdio, command=Some("node")
+
+14:17:28.449 › [aionrs] [mcp] Connecting to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1'...
+
+14:17:28.507 › [aionrs] [team-mcp-stdio] Script started. PID=67126, TEAM_MCP_PORT=58333, SLOT=slot-57323c07
+
+14:17:28.514 › [TeamMcpServer] TCP connection received from 127.0.0.1:58334
+14:17:28.517 › [TeamMcpServer] MCP ready from slot slot-57323c07
+14:17:28.519 › [aionrs] [mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools, resources=false
+[mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools
+
+14:17:44.790 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:18:34.670 › [TeammateManager] wake(Leader): status=pending, proceeding
+14:18:34.672 › [TeammateManager] wake(Leader): sendPrompt type=full, length=12346, preview="# You are the Team Leader\n\n## Your Role\nYou coordinate a team of AI agents. You do NOT do implementation work\nyourself. You break down tasks, assign them to teammates, and synthesize\nresults.\n\n## Team"
+14:18:34.673 › [AionrsManager] message sent: msg_id=67742857-33ed-47c9-b814-517f602e72b5
+14:18:34.674 › [AionrsManager] stream_start: msg_id=67742857-33ed-47c9-b814-517f602e72b5, TTFT=1ms
+14:18:46.882 › [AionrsManager] stream_end: msg_id=67742857-33ed-47c9-b814-517f602e72b5, total=12209ms { input_tokens: 7024, output_tokens: 234 }
+14:18:50.097 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:19:17.923 › [AionrsManager] set_mode sent: mode=yolo
+14:19:17.924 › [AionrsManager] info: mode updated: yolo (1ms since command)
+14:19:17.924 › [AionrsManager] config_changed received (1ms) {
+  tool_approval: true,
+  thinking: false,
+  effort: true,
+  effort_levels: [ 'low', 'medium', 'high' ],
+  modes: [ 'default', 'auto_edit', 'yolo' ],
+  current_mode: 'yolo',
+  mcp: true
+}
+14:19:17.925 › [aionrs] [protocol] SetMode applied: yolo
+
+14:19:21.931 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:19:21.931 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=19, preview="[From User] 没问题，开始吧"
+14:19:21.932 › [AionrsManager] message sent: msg_id=8643bb67-5212-49f9-ac3c-31c1b97445a5
+14:19:21.932 › [AionrsManager] stream_start: msg_id=8643bb67-5212-49f9-ac3c-31c1b97445a5, TTFT=0ms
+14:19:25.887 › [AionrsManager] info: Tool call: team_spawn_agent
+14:19:25.888 › [AionrsManager] info: Tool call: team_spawn_agent
+14:19:25.888 › [AionrsManager] info: Tool call: team_spawn_agent
+14:19:25.890 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:19:25.891 › [TeamMcpServer] TCP connection received from 127.0.0.1:58533
+14:19:25.894 › [TeammateManager] wake(moderator): status=pending, proceeding
+14:19:25.894 › [TeammateManager] wake(moderator): sendPrompt type=full, length=4178, preview="# You are a Team Member\n\n## Your Identity\nName: moderator, Role: aionrs AI assistant\n\n## Conversation Style\n- If the user greets you, starts a new chat, or asks what you can do without assigning concr"
+14:19:25.902 › [TeamMcpServer] TCP connection received from 127.0.0.1:58534
+14:19:25.904 › [TeammateManager] wake(affirmative): status=pending, proceeding
+14:19:25.904 › [TeammateManager] wake(affirmative): sendPrompt type=full, length=4185, preview="# You are a Team Member\n\n## Your Identity\nName: affirmative, Role: aionrs AI assistant\n\n## Conversation Style\n- If the user greets you, starts a new chat, or asks what you can do without assigning con"
+14:19:25.910 › [TeamMcpServer] TCP connection received from 127.0.0.1:58535
+14:19:25.911 › [aionrs] [mcp] AddMcpServer received: name=aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1, transport=stdio, command=Some("node")
+[mcp] Connecting to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1'...
+
+14:19:25.912 › [TeammateManager] wake(negative): status=pending, proceeding
+14:19:25.913 › [TeammateManager] wake(negative): sendPrompt type=full, length=4192, preview="# You are a Team Member\n\n## Your Identity\nName: negative, Role: aionrs AI assistant\n\n## Conversation Style\n- If the user greets you, starts a new chat, or asks what you can do without assigning concre"
+14:19:25.920 › [AionrsManager] info: [team_spawn_agent success] Teammate "moderator" (slot-4c7a3c6c) has been created and joined the team. You can now assign tasks and send messages to them.
+14:19:25.920 › [AionrsManager] info: [team_spawn_agent success] Teammate "affirmative" (slot-1b34452b) has been created and joined the team. You can now assign tasks and send messages to them.
+14:19:25.920 › [AionrsManager] info: [team_spawn_agent success] Teammate "negative" (slot-0fa85cb9) has been created and joined the team. You can now assign tasks and send messages to them.
+14:19:25.920 › [aionrs] [mcp] AddMcpServer received: name=aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1, transport=stdio, command=Some("node")
+
+14:19:25.921 › [aionrs] [mcp] Connecting to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1'...
+
+14:19:25.925 › [aionrs] [mcp] AddMcpServer received: name=aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1, transport=stdio, command=Some("node")
+[mcp] Connecting to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1'...
+
+14:19:25.981 › [aionrs] [team-mcp-stdio] Script started. PID=72114, TEAM_MCP_PORT=58333, SLOT=slot-1b34452b
+
+14:19:25.982 › [aionrs] [team-mcp-stdio] Script started. PID=72110, TEAM_MCP_PORT=58333, SLOT=slot-4c7a3c6c
+
+14:19:25.989 › [aionrs] [team-mcp-stdio] Script started. PID=72116, TEAM_MCP_PORT=58333, SLOT=slot-0fa85cb9
+
+14:19:25.991 › [TeamMcpServer] TCP connection received from 127.0.0.1:58537
+14:19:25.992 › [TeamMcpServer] TCP connection received from 127.0.0.1:58536
+14:19:25.995 › [TeamMcpServer] MCP ready from slot slot-1b34452b
+14:19:25.996 › [TeamMcpServer] MCP ready from slot slot-4c7a3c6c
+14:19:25.996 › [TeamMcpServer] TCP connection received from 127.0.0.1:58538
+14:19:25.999 › [aionrs] [mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools, resources=false
+[mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools
+
+14:19:26.000 › [AionrsManager] message sent: msg_id=44ea4881-0c75-4385-aae0-cc6ab6435d12
+14:19:26.000 › [AionrsManager] stream_start: msg_id=44ea4881-0c75-4385-aae0-cc6ab6435d12, TTFT=0ms
+14:19:26.000 › [TeamMcpServer] MCP ready from slot slot-0fa85cb9
+14:19:26.000 › [aionrs] [mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools, resources=false
+[mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools
+
+14:19:26.000 › [AionrsManager] message sent: msg_id=4fbaeb9e-c5e9-4405-959d-33adbeaed3b1
+14:19:26.001 › [AionrsManager] stream_start: msg_id=4fbaeb9e-c5e9-4405-959d-33adbeaed3b1, TTFT=1ms
+14:19:26.003 › [aionrs] [mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools, resources=false
+[mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools
+
+14:19:26.003 › [AionrsManager] message sent: msg_id=48484c21-e8b9-45c9-87e0-3aac68bd035d
+14:19:26.003 › [AionrsManager] stream_start: msg_id=48484c21-e8b9-45c9-87e0-3aac68bd035d, TTFT=0ms
+14:19:27.168 › [AionrsManager] info: Tool call: team_task_create
+14:19:27.169 › [TeamMcpServer] TCP connection received from 127.0.0.1:58544
+14:19:27.170 › [AionrsManager] info: [team_task_create success] Task created: [95e5ba61] "设定辩论赛主题、规则及流程" (assigned to moderator)
+14:19:27.891 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:19:33.495 › [AionrsManager] info: Tool call: team_send_message
+14:19:33.495 › [TeamMcpServer] TCP connection received from 127.0.0.1:58550
+14:19:33.496 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:19:33.497 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:19:33.498 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:19:35.499 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:19:41.001 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d14949de
+14:19:41.002 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:19:41.003 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=188, preview="[From Leader] 你好，moderator。现在我们需要组织一场由 Agent 参与的辩论赛。你的任务是：\n1. 确定一个具有争议性且适合 AI 讨论的辩论主题。\n2. 设定详细的辩论规则（例如：开篇陈词、自由辩论、总结陈词的顺序和时间/字数限制）。\n3. 规划整个流程。\n\n请先提交你的方案，以便我通知正方（affirmative）和反方（negative）准备。"
+14:19:41.003 › [AionrsManager] message sent: msg_id=3b4efd09-8e82-4ee1-afcf-16e27061ced7
+14:19:41.004 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d80b5dd7
+14:19:41.004 › [TeammateManager] maybeWakeLeaderWhenAllIdle: moderator:active, affirmative:idle, negative:active → SKIP
+14:19:41.004 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:19:41.004 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 5cdef839
+14:19:41.005 › [TeammateManager] maybeWakeLeaderWhenAllIdle: moderator:active, affirmative:idle, negative:idle → SKIP
+14:19:44.314 › [AionrsManager] stream_end: msg_id=8643bb67-5212-49f9-ac3c-31c1b97445a5, total=22382ms { input_tokens: 37220, output_tokens: 603 }
+14:20:25.790 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:20:25.790 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=101, preview="[From affirmative] Turn completed\n[From negative] Turn completed\n[From User] 你重启下 moderator，看上去它不太正常！"
+14:20:25.791 › [AionrsManager] message sent: msg_id=0c2a44e0-bcc0-4dd2-bfb8-baf338c3cdfa
+14:20:25.791 › [AionrsManager] stream_start: msg_id=0c2a44e0-bcc0-4dd2-bfb8-baf338c3cdfa, TTFT=0ms
+14:20:31.325 › [AionrsManager] info: Tool call: team_shutdown_agent
+14:20:31.326 › [TeamMcpServer] TCP connection received from 127.0.0.1:58650
+14:20:31.327 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:20:31.327 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:20:31.328 › [AionrsManager] info: [team_shutdown_agent success] Shutdown request sent to "moderator". Waiting for their confirmation.
+14:20:33.134 › [AionrsManager] stream_end: msg_id=0c2a44e0-bcc0-4dd2-bfb8-baf338c3cdfa, total=7343ms { input_tokens: 53067, output_tokens: 676 }
+14:20:33.329 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:20:41.009 › [TeammateManager] moderator (slot-4c7a3c6c) stopped responding after 60s without sending any update
+14:20:41.009 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:20:41.010 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=300, preview="[From moderator] Teammate moderator (aionrs) stopped responding after 60s without sending any update. Their session may be stuck or the model may be generating an overlong silent turn. Decide whether "
+14:20:41.010 › [AionrsManager] message sent: msg_id=1fd4b3d0-b87b-4bdf-bf5b-da0495d28ea2
+14:20:41.011 › [AionrsManager] stream_start: msg_id=1fd4b3d0-b87b-4bdf-bf5b-da0495d28ea2, TTFT=1ms
+14:20:43.200 › [AionrsManager] info: Tool call: team_spawn_agent
+14:20:43.203 › [TeamMcpServer] TCP connection received from 127.0.0.1:58673
+14:20:43.204 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:20:43.209 › [TeammateManager] wake(moderator): status=pending, proceeding
+14:20:43.210 › [TeammateManager] wake(moderator): sendPrompt type=full, length=4204, preview="# You are a Team Member\n\n## Your Identity\nName: moderator, Role: aionrs AI assistant\n\n## Conversation Style\n- If the user greets you, starts a new chat, or asks what you can do without assigning concr"
+14:20:43.221 › [AionrsManager] info: [team_spawn_agent success] Teammate "moderator" (slot-4fe6ab9c) has been created and joined the team. You can now assign tasks and send messages to them.
+14:20:43.229 › [aionrs] [mcp] AddMcpServer received: name=aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1, transport=stdio, command=Some("node")
+
+14:20:43.229 › [aionrs] [mcp] Connecting to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1'...
+
+14:20:43.286 › [aionrs] [team-mcp-stdio] Script started. PID=75358, TEAM_MCP_PORT=58333, SLOT=slot-4fe6ab9c
+
+14:20:43.293 › [TeamMcpServer] TCP connection received from 127.0.0.1:58674
+14:20:43.295 › [TeamMcpServer] MCP ready from slot slot-4fe6ab9c
+14:20:43.298 › [aionrs] [mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools, resources=false
+[mcp] Connected to 'aionui-team-bbd874d1-ec2b-4879-a708-a16fc55da4d1': 10 tools
+
+14:20:43.298 › [AionrsManager] message sent: msg_id=c3680bac-fbbb-4ba0-8fe0-8fbdc8dab0cb
+14:20:43.298 › [AionrsManager] stream_start: msg_id=c3680bac-fbbb-4ba0-8fe0-8fbdc8dab0cb, TTFT=0ms
+14:20:45.206 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:20:47.115 › [TeammateManager] Agent slot-4c7a3c6c (moderator) removed
+14:20:47.306 › [AionrsManager] info: Tool call: team_send_message
+14:20:47.307 › [TeamMcpServer] TCP connection received from 127.0.0.1:58681
+14:20:47.307 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:20:47.308 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:20:47.308 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:20:49.308 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:20:50.509 › [AionrsManager] stream_end: msg_id=1fd4b3d0-b87b-4bdf-bf5b-da0495d28ea2, total=9499ms { input_tokens: 77619, output_tokens: 920 }
+14:20:58.301 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for b5b95452
+14:20:58.302 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:20:58.303 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=180, preview="[From Leader] 你好，新任 moderator。由于之前的 moderator 出现了响应问题，现在由你接管主持工作。\n\n你的任务是：\n1. 确定一个具有争议性且适合 AI 讨论的辩论主题。\n2. 设定详细的辩论规则（例如：开篇陈词、自由辩论、总结陈词的顺序和限制）。\n3. 规划整个流程。\n\n请尽快提交你的方案，我们将基于你的设定启动这场辩论赛。"
+14:20:58.305 › [AionrsManager] message sent: msg_id=868263ed-c2bb-4b32-91af-553c517f054e
+14:20:58.305 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:21:19.313 › [AionrsManager] info: Tool call: team_task_list
+14:21:19.314 › [AionrsManager] info: Tool call: team_members
+14:21:19.315 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:19.319 › [TeamMcpServer] TCP connection received from 127.0.0.1:58706
+14:21:19.323 › [TeamMcpServer] TCP connection received from 127.0.0.1:58707
+14:21:19.329 › [AionrsManager] info: [team_task_list success] ## Team Tasks
+- [95e5ba61] 设定辩论赛主题、规则及流程 (pending, owner: moderator)
+14:21:19.329 › [AionrsManager] info: [team_members success] ## Team Members
+- Leader (type: aionrs, role: leader, status: idle)
+- affirmative (type: aionrs, role: teammate, status: idle, model: google/gemma-4-31b-it)
+- negative (type: aionrs, role: teammate, status: idle, model: google/gemma-4-31b-it)
+- moderator (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+14:21:21.086 › [AionrsManager] info: Tool call: team_task_update
+14:21:21.088 › [TeamMcpServer] TCP connection received from 127.0.0.1:58710
+14:21:21.089 › [AionrsManager] info: [team_task_update success] Task 95e5ba61 updated. Status: in_progress.
+14:21:21.316 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:23.388 › [AionrsManager] info: Tool call: team_send_message
+14:21:23.389 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:23.390 › [TeamMcpServer] TCP connection received from 127.0.0.1:58713
+14:21:23.390 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:21:23.390 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=156, preview="[From moderator] I have started working on task [95e5ba61]: \"设定辩论赛主题、规则及流程\". I will define the debate topic, rules, and process now and report back shortly."
+14:21:23.396 › [AionrsManager] message sent: msg_id=4daf2138-098d-4d19-bd4c-5e41bec7a7f1
+14:21:23.396 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:21:23.397 › [AionrsManager] stream_start: msg_id=4daf2138-098d-4d19-bd4c-5e41bec7a7f1, TTFT=1ms
+14:21:25.390 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:25.423 › [AionrsManager] stream_end: msg_id=4daf2138-098d-4d19-bd4c-5e41bec7a7f1, total=2027ms { input_tokens: 86066, output_tokens: 977 }
+14:21:32.860 › [AionrsManager] info: Tool call: Write
+14:21:32.862 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:32.862 › [AionrsManager] info: [Write success] Created /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/debate_plan.md (26 lines)
+14:21:34.864 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:38.021 › [AionrsManager] info: Tool call: team_send_message
+14:21:38.021 › [AionrsManager] info: Tool call: team_task_update
+14:21:38.024 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:38.025 › [TeamMcpServer] TCP connection received from 127.0.0.1:58726
+14:21:38.025 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:21:38.026 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=596, preview="[From moderator] I have completed the task [95e5ba61]. \n\nI have defined the debate theme, rules, and process. The details have been saved to `/Users/gmf/.aionui-dev/aionrs-temp-1776925047594/debate_pl"
+14:21:38.028 › [AionrsManager] message sent: msg_id=dc699beb-f2dc-4d74-8b04-7ffa170925da
+14:21:38.029 › [AionrsManager] stream_start: msg_id=dc699beb-f2dc-4d74-8b04-7ffa170925da, TTFT=1ms
+14:21:38.030 › [TeamMcpServer] TCP connection received from 127.0.0.1:58727
+14:21:38.032 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:21:38.033 › [AionrsManager] info: [team_task_update success] Task 95e5ba61 updated. Status: completed.
+14:21:38.915 › [AionrsManager] stream_end: msg_id=c3680bac-fbbb-4ba0-8fe0-8fbdc8dab0cb, total=40610ms { input_tokens: 33326, output_tokens: 810 }
+14:21:38.917 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:21:38.917 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:21:40.025 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:41.910 › [AionrsManager] info: Tool call: team_task_update
+14:21:41.910 › [AionrsManager] info: Tool call: team_task_create
+14:21:41.910 › [AionrsManager] info: Tool call: team_task_create
+14:21:41.911 › [TeamMcpServer] TCP connection received from 127.0.0.1:58743
+14:21:41.911 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:41.913 › [TeamMcpServer] TCP connection received from 127.0.0.1:58744
+14:21:41.914 › [TeamMcpServer] TCP connection received from 127.0.0.1:58745
+14:21:41.915 › [AionrsManager] info: [team_task_update success] Task 95e5ba61 updated. Status: completed.
+14:21:41.915 › [AionrsManager] info: [team_task_create success] Task created: [89455802] "准备正方开篇陈词：AI 最终将取代人类创造力" (assigned to affirmative)
+14:21:41.915 › [AionrsManager] info: [team_task_create success] Task created: [8945d4f3] "准备反方开篇陈词：AI 仅是工具，不会取代人类创造力" (assigned to negative)
+14:21:43.913 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:47.435 › [AionrsManager] info: Tool call: team_send_message
+14:21:47.436 › [AionrsManager] info: Tool call: team_send_message
+14:21:47.436 › [TeamMcpServer] TCP connection received from 127.0.0.1:58753
+14:21:47.437 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:21:47.438 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=278, preview="[From Leader] 你好，affirmative。moderator 已经确定了本场辩论的主题和规则。\n\n**辩论主题：** \"Artificial Intelligence ultimately replaces human creativity\" (人工智能最终将取代人类创造力)\n**你的立场：** 正方 (Affirmative) —— 主张 AI 最终将取代人类创造力。\n**当前阶"
+14:21:47.439 › [AionrsManager] message sent: msg_id=eafb05f7-cfd8-4abf-be8e-40912cadf8e0
+14:21:47.440 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:47.440 › [TeamMcpServer] TCP connection received from 127.0.0.1:58754
+14:21:47.440 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:21:47.440 › [TeammateManager] wake(negative): status=idle, proceeding
+14:21:47.441 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=276, preview="[From Leader] 你好，negative。moderator 已经确定了本场辩论的主题和规则。\n\n**辩论主题：** \"Artificial Intelligence ultimately replaces human creativity\" (人工智能最终将取代人类创造力)\n**你的立场：** 反方 (Negative) —— 主张 AI 仅是工具，不会取代人类创造力。\n**当前阶段："
+14:21:47.442 › [AionrsManager] message sent: msg_id=6822a0c2-de29-4c1c-829b-c69146e71a0e
+14:21:47.443 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:21:47.443 › [AionrsManager] info: [team_send_message success] Message sent to negative's inbox. They will process it shortly.
+14:21:47.443 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:21:49.439 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:51.322 › [AionrsManager] stream_end: msg_id=dc699beb-f2dc-4d74-8b04-7ffa170925da, total=13294ms { input_tokens: 112926, output_tokens: 1547 }
+14:21:51.322 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:21:51.323 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=31, preview="[From moderator] Turn completed"
+14:21:51.326 › [AionrsManager] message sent: msg_id=32328a97-6d87-4330-b62b-953b4b462322
+14:21:51.326 › [AionrsManager] stream_start: msg_id=32328a97-6d87-4330-b62b-953b4b462322, TTFT=0ms
+14:21:52.591 › [AionrsManager] stream_end: msg_id=32328a97-6d87-4330-b62b-953b4b462322, total=1265ms { input_tokens: 122369, output_tokens: 1574 }
+14:21:56.005 › [AionrsManager] stream_end: msg_id=4fbaeb9e-c5e9-4405-959d-33adbeaed3b1, total=8566ms { input_tokens: 0, output_tokens: 0 }
+14:21:56.006 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:21:56.008 › [AionrsManager] stream_end: msg_id=48484c21-e8b9-45c9-87e0-3aac68bd035d, total=8566ms { input_tokens: 0, output_tokens: 0 }
+14:21:56.008 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:21:56.008 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:21:56.009 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=64, preview="[From affirmative] Turn completed\n[From negative] Turn completed"
+14:21:56.009 › [AionrsManager] message sent: msg_id=7a22935d-6d28-4bb9-8388-6c00a4a29edd
+14:21:56.010 › [AionrsManager] stream_start: msg_id=7a22935d-6d28-4bb9-8388-6c00a4a29edd, TTFT=1ms
+14:21:57.784 › [AionrsManager] info: Tool call: Bash
+14:21:57.801 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:57.806 › [AionrsManager] info: [Bash success] Exit code: 0
+STDOUT:
+debate_plan.md
+
+STDERR:
+14:21:59.803 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:21:59.847 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:21:59.848 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=20, preview="[From User] continue"
+14:21:59.848 › [AionrsManager] message sent: msg_id=090275b8-5531-476e-8fe9-5245d0527786
+14:21:59.849 › [AionrsManager] stream_start: msg_id=090275b8-5531-476e-8fe9-5245d0527786, TTFT=1ms
+14:22:01.912 › [AionrsManager] info: Tool call: team_task_list
+14:22:01.912 › [AionrsManager] info: Tool call: team_members
+14:22:01.913 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:01.915 › [TeamMcpServer] TCP connection received from 127.0.0.1:58777
+14:22:01.918 › [TeamMcpServer] TCP connection received from 127.0.0.1:58778
+14:22:01.918 › [AionrsManager] info: [team_task_list success] ## Team Tasks
+- [95e5ba61] 设定辩论赛主题、规则及流程 (completed, unassigned)
+- [89455802] 准备正方开篇陈词：AI 最终将取代人类创造力 (pending, owner: affirmative)
+- [8945d4f3] 准备反方开篇陈词：AI 仅是工具，不会取代人类创造力 (pending, owner: negative)
+14:22:01.918 › [AionrsManager] info: [team_members success] ## Team Members
+- Leader (type: aionrs, role: leader, status: active)
+- affirmative (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+- negative (type: aionrs, role: teammate, status: idle, model: google/gemma-4-31b-it)
+- moderator (type: aionrs, role: teammate, status: idle, model: google/gemma-4-31b-it)
+14:22:03.272 › [AionrsManager] info: Tool call: team_task_update
+14:22:03.274 › [TeamMcpServer] TCP connection received from 127.0.0.1:58780
+14:22:03.275 › [AionrsManager] info: [team_task_update success] Task 89455802 updated. Status: in_progress.
+14:22:03.867 › [TeammateManager] wake(negative): status=idle, proceeding
+14:22:03.867 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=20, preview="[From User] continue"
+14:22:03.868 › [AionrsManager] message sent: msg_id=c36077f3-67ce-4b61-bfb9-d9f6440fbaf4
+14:22:03.868 › [AionrsManager] stream_start: msg_id=c36077f3-67ce-4b61-bfb9-d9f6440fbaf4, TTFT=0ms
+14:22:03.940 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:04.974 › [AionrsManager] info: Tool call: team_task_list
+14:22:04.975 › [AionrsManager] info: Tool call: team_members
+14:22:04.978 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:04.979 › [TeamMcpServer] TCP connection received from 127.0.0.1:58782
+14:22:04.983 › [TeamMcpServer] TCP connection received from 127.0.0.1:58783
+14:22:04.984 › [AionrsManager] info: [team_task_list success] ## Team Tasks
+- [95e5ba61] 设定辩论赛主题、规则及流程 (completed, unassigned)
+- [89455802] 准备正方开篇陈词：AI 最终将取代人类创造力 (in_progress, unassigned)
+- [8945d4f3] 准备反方开篇陈词：AI 仅是工具，不会取代人类创造力 (pending, owner: negative)
+14:22:04.984 › [AionrsManager] info: [team_members success] ## Team Members
+- Leader (type: aionrs, role: leader, status: active)
+- affirmative (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+- negative (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+- moderator (type: aionrs, role: teammate, status: idle, model: google/gemma-4-31b-it)
+14:22:06.958 › [AionrsManager] info: Tool call: team_task_update
+14:22:06.962 › [TeamMcpServer] TCP connection received from 127.0.0.1:58786
+14:22:06.964 › [AionrsManager] info: [team_task_update success] Task 8945d4f3 updated. Status: in_progress.
+14:22:06.994 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:09.277 › [AionrsManager] info: Tool call: team_send_message
+14:22:09.278 › [TeamMcpServer] TCP connection received from 127.0.0.1:58787
+14:22:09.278 › [TeammateManager] wake(affirmative): DEFERRED (agent active)
+14:22:09.278 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:22:09.278 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:22:09.279 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=209, preview="[From Leader] 你好，affirmative 和 negative。虽然你们在系统中标记了任务完成，但我在工作目录中没有看到你们的开篇陈词文档。\n\n请立即将你们的【开篇陈词】以文本形式发送给我，或者将其写入到工作目录的对应文件中（例如 `opening_affirmative.md` 和 `opening_negative.md`）。\n\n只有在接收到具体内容后，我才能引导比赛进入下一个"
+14:22:09.280 › [AionrsManager] message sent: msg_id=93502f8c-8e2f-4c33-b5e2-aa0bbae8d73c
+14:22:09.280 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:09.280 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): affirmative, negative, moderator
+14:22:09.281 › [AionrsManager] stream_start: msg_id=93502f8c-8e2f-4c33-b5e2-aa0bbae8d73c, TTFT=1ms
+14:22:10.991 › [AionrsManager] stream_end: msg_id=7a22935d-6d28-4bb9-8388-6c00a4a29edd, total=14982ms { input_tokens: 151154, output_tokens: 1833 }
+14:22:11.200 › [AionrsManager] info: Tool call: team_send_message
+14:22:11.202 › [TeamMcpServer] TCP connection received from 127.0.0.1:58791
+14:22:11.202 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:22:11.202 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=222, preview="[From moderator] Acknowledged. I noticed the Leader is requesting the opening statements from affirmative and negative. Since I am the moderator, I will stand by for their submissions and then guide t"
+14:22:11.204 › [AionrsManager] message sent: msg_id=a9a0ffd3-bbe2-4071-94f9-688ddc07f5cd
+14:22:11.204 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:22:11.204 › [AionrsManager] stream_start: msg_id=a9a0ffd3-bbe2-4071-94f9-688ddc07f5cd, TTFT=0ms
+14:22:11.280 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:12.240 › [AionrsManager] stream_end: msg_id=93502f8c-8e2f-4c33-b5e2-aa0bbae8d73c, total=2960ms { input_tokens: 46110, output_tokens: 887 }
+14:22:12.241 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:22:12.768 › [AionrsManager] stream_end: msg_id=a9a0ffd3-bbe2-4071-94f9-688ddc07f5cd, total=1564ms { input_tokens: 161010, output_tokens: 1883 }
+14:22:14.955 › [AionrsManager] info: Tool call: Write
+14:22:14.957 › [AionrsManager] info: [Write success] Created /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/affirmative_opening_statement.md (24 lines)
+14:22:14.959 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:16.960 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:19.416 › [AionrsManager] info: Tool call: Write
+14:22:19.417 › [AionrsManager] info: [Write success] Created /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/negative_opening_statement.md (23 lines)
+14:22:19.418 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:21.419 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:21.844 › [AionrsManager] info: Tool call: team_send_message
+14:22:21.844 › [AionrsManager] info: Tool call: team_task_update
+14:22:21.847 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:21.847 › [TeamMcpServer] TCP connection received from 127.0.0.1:58803
+14:22:21.848 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:22:21.848 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=626, preview="[From moderator] Turn completed\n[From affirmative] I have completed the opening statement for the affirmative side: \"AI will eventually replace human creativity.\" \n\nThe argument focuses on three main "
+14:22:21.849 › [AionrsManager] message sent: msg_id=d6ab51d2-f94a-4d00-a8f0-af1231c9d908
+14:22:21.850 › [AionrsManager] stream_start: msg_id=d6ab51d2-f94a-4d00-a8f0-af1231c9d908, TTFT=1ms
+14:22:21.851 › [TeamMcpServer] TCP connection received from 127.0.0.1:58804
+14:22:21.853 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:22:21.853 › [AionrsManager] info: [team_task_update success] Task 89455802 updated. Status: completed.
+14:22:23.848 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:29.791 › [AionrsManager] info: Tool call: team_send_message
+14:22:29.792 › [AionrsManager] info: Tool call: team_task_update
+14:22:29.793 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:29.794 › [TeamMcpServer] TCP connection received from 127.0.0.1:58810
+14:22:29.794 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:22:29.795 › [TeamMcpServer] TCP connection received from 127.0.0.1:58811
+14:22:29.796 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:22:29.797 › [AionrsManager] info: [team_task_update success] Task 8945d4f3 updated. Status: completed.
+14:22:30.300 › [AionrsManager] info: Tool call: team_send_message
+14:22:30.302 › [TeamMcpServer] TCP connection received from 127.0.0.1:58816
+14:22:30.302 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:22:30.303 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:22:30.454 › [AionrsManager] stream_end: msg_id=c36077f3-67ce-4b61-bfb9-d9f6440fbaf4, total=26586ms { input_tokens: 28318, output_tokens: 872 }
+14:22:30.455 › [TeammateManager] wake(negative): status=idle, proceeding
+14:22:30.455 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=209, preview="[From Leader] 你好，affirmative 和 negative。虽然你们在系统中标记了任务完成，但我在工作目录中没有看到你们的开篇陈词文档。\n\n请立即将你们的【开篇陈词】以文本形式发送给我，或者将其写入到工作目录的对应文件中（例如 `opening_affirmative.md` 和 `opening_negative.md`）。\n\n只有在接收到具体内容后，我才能引导比赛进入下一个"
+14:22:30.456 › [AionrsManager] message sent: msg_id=70bc0d1e-8f48-44b0-8497-763a22fa0aff
+14:22:30.457 › [AionrsManager] stream_start: msg_id=70bc0d1e-8f48-44b0-8497-763a22fa0aff, TTFT=1ms
+14:22:31.025 › [AionrsManager] stream_end: msg_id=090275b8-5531-476e-8fe9-5245d0527786, total=31177ms { input_tokens: 34596, output_tokens: 875 }
+14:22:31.026 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:22:31.026 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=209, preview="[From Leader] 你好，affirmative 和 negative。虽然你们在系统中标记了任务完成，但我在工作目录中没有看到你们的开篇陈词文档。\n\n请立即将你们的【开篇陈词】以文本形式发送给我，或者将其写入到工作目录的对应文件中（例如 `opening_affirmative.md` 和 `opening_negative.md`）。\n\n只有在接收到具体内容后，我才能引导比赛进入下一个"
+14:22:31.028 › [AionrsManager] message sent: msg_id=4a39d6a3-2a1f-41ca-b5c6-b49e9ca8aa50
+14:22:31.029 › [AionrsManager] stream_start: msg_id=4a39d6a3-2a1f-41ca-b5c6-b49e9ca8aa50, TTFT=1ms
+14:22:31.198 › [AionrsManager] info: Tool call: team_task_update
+14:22:31.199 › [AionrsManager] info: Tool call: Read
+14:22:31.200 › [TeamMcpServer] TCP connection received from 127.0.0.1:58820
+14:22:31.201 › [AionrsManager] info: [team_task_update success] Task 89455802 updated. Status: completed.
+14:22:31.201 › [AionrsManager] info: [Read success]      1      # 正方开篇陈词：AI 最终将取代人类创造力
+     2
+     3  ## 核心观点
+     4  AI 不仅仅是在模拟创造力，而是在重新定义创造力的本质。随着计算能力的提升、数据规模的扩大以及算法的进化，AI 最终将在创造力的所有维度——包括构思、执行和情感共鸣——上超越人类，从而实现对人类创造力的全面取代。
+     5
+     6  ## 论点支撑
+     7
+     8  ### 1. 创造力的本质是“组合”与“模式识别”
+     9  人类所谓的“灵感”或“原创性”，在生物学和认知科学层面，实际上是对既有经验、知识和感官输入的重新组合。
+    10  - AI 的生成式模型（如 LLMs, Diffusion Models）在本质上执行的是更高效、更海量的模式识别与组合。
+    11  - AI 能在秒级时间内遍历人类数千年积累的艺术、文学和科学数据，从中发现人类由于认知局限而无法察觉的潜在关联，从而创造出真正“新颖”的作品。
+    12
+    13  ### 2. 执行力的绝对压制
+    14  创造力不仅在于“点子”，更在于将点子转化为现实的能力。
+    15  - 在绘画、作曲、编程和写作等领域，AI 已经实现了从“草图”到“成品”的瞬间跨越。
+    16  - 当 AI 能够以极低的成本、极高的速度产出高质量作品时，人类在执行层面的竞争优势将彻底消失。
+    17
+    18  ### 3. 情感共鸣的算法化
+    19  反对者常认为 AI 缺乏“灵魂”或“真实情感”。但事实是，情感共鸣是通过特定的模式（色调、节奏、词汇、结构）触发的。
+    20  - AI 可以通过分析数百万个成功触发人类情感的样本，精准地构建出能够引起强烈共鸣的作品。
+    21  - 对于受众而言，作品带来的情感价值取决于结果，而非创作者是否具有生物学意义上的“意识”。
+    22
+    23  ## 结论
+    24  人类创造力曾是文明的最高壁垒，但现在这道壁垒正在崩塌。AI 将从辅助工具进化为创造力的主体。当我们面对一个能比我们更懂审美、更擅长构思且执行力完美的实体时，人类的创造力将不再是必然的选择，而将成为一种昂贵且低效的怀旧行为。
+14:22:31.794 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:34.281 › [AionrsManager] stream_end: msg_id=d6ab51d2-f94a-4d00-a8f0-af1231c9d908, total=12432ms { input_tokens: 181852, output_tokens: 2094 }
+14:22:34.281 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:22:34.282 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=298, preview="[From negative] 我已完成反方开篇陈词的准备工作。\n\n核心论点聚焦于：\n1. 生成与创造的本质区别（概率统计 vs 意识冲动）。\n2. 创造力的核心在于意图与意义的赋予，而 AI 缺乏主观意识。\n3. AI 是工具而非替代者，将推动人类创造力向更高维度演进。\n\n具体内容已保存至：/Users/gmf/.aionui-dev/aionrs-temp-1776925047594/nega"
+14:22:34.283 › [AionrsManager] message sent: msg_id=e67a775e-23db-4901-b817-1077377d5e55
+14:22:34.284 › [AionrsManager] stream_start: msg_id=e67a775e-23db-4901-b817-1077377d5e55, TTFT=1ms
+14:22:34.773 › [AionrsManager] info: Tool call: Bash
+14:22:34.775 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:34.781 › [AionrsManager] info: [Bash success] Exit code: 0
+STDOUT:
+affirmative_opening_statement.md
+debate_plan.md
+negative_opening_statement.md
+
+STDERR:
+14:22:36.167 › [AionrsManager] info: Tool call: team_task_update
+14:22:36.167 › [AionrsManager] info: Tool call: Read
+14:22:36.167 › [TeamMcpServer] TCP connection received from 127.0.0.1:58822
+14:22:36.169 › [AionrsManager] info: [team_task_update success] Task 8945d4f3 updated. Status: completed.
+14:22:36.169 › [AionrsManager] info: [Read success]      1      # 反方开篇陈词：AI 仅是工具，不会取代人类创造力
+     2
+     3  **核心论点：** AI 的本质是基于概率的统计模型，它在执行“生成”而非“创造”。真正的创造力源于人类的意识、情感、生命体验以及对意义的追求，这些是算法永远无法模拟的维度。
+     4
+     5  ## 论据一：生成 $\neq$ 创造（机制之差）
+     6  AI 的工作原理是分析海量数据并预测下一个最可能的 token 或像素。它是在既有的模式中进行高效的“重组”和“插值”。
+     7  - **AI 的逻辑：** 基于历史数据的概率分布 $\rightarrow$ 模拟风格 $\rightarrow$ 输出结果。
+     8  - **人类的逻辑：** 基于情感触动、直觉、对未知的好奇以及打破既有模式的冲动 $\rightarrow$ 产生新范式 $\rightarrow$ 定义新风格。
+     9  AI 可以画出像梵高的画，但它永远无法在没有梵高的情况下，因为对生命之痛的体悟而创造出“后印象派”。
+    10
+    11  ## 论据二：创造力的核心是“意图”与“意义”（主观之差）
+    12  艺术和创造力的价值不在于结果的“精美”，而在于其承载的意图（Intentionality）和赋予的意义。
+    13  - AI 没有欲望，没有恐惧，没有爱，也没有对死亡的焦虑。它不明白它所生成的文字或图像意味着什么。
+    14  - 只有当人类在 AI 的生成结果中发现意义，并将其定义为“艺术”时，该结果才具有价值。AI 是画笔，人类才是画家。
+    15
+    16  ## 论据三：协同演进而非替代（关系之差）
+    17  历史上每一次工具的革新（如摄影术的出现）都被认为会取代艺术，但结果是它将人类从重复性的写实工作中解放出来，推动了更深层次的创造力爆发（如抽象主义的兴起）。
+    18  - AI 将承担“低阶创造”（如基础绘图、格式化写作、代码补全）。
+    19  - 人类将升级到“高阶创造”（如概念设计、哲学定义、复杂的情感编排）。
+    20  AI 提升了创造力的底线，但从未触碰到创造力的天花板。
+    21
+    22  **总结：**
+    23  AI 是人类创造力的增强插件，而非替代者。它能模仿创造的表象，但无法复制创造的灵魂。因此，我们坚决认为：AI 仅是工具，绝不会取代人类的创造力。
+14:22:36.779 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:36.788 › [AionrsManager] info: Tool call: Read
+14:22:36.789 › [AionrsManager] info: [Read success] File unchanged since last read. The content from the earlier Read tool_result in this conversation is still current — refer to that instead of re-reading.
+14:22:36.798 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:37.731 › [AionrsManager] info: Tool call: team_task_create
+14:22:37.737 › [TeamMcpServer] TCP connection received from 127.0.0.1:58824
+14:22:37.739 › [AionrsManager] info: [team_task_create success] Task created: [406925c7] "引导质询环节 (Cross-examination)" (assigned to moderator)
+14:22:38.799 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:45.458 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 5cdef839
+14:22:45.460 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:22:50.457 › [AionrsManager] info: Tool call: team_send_message
+14:22:50.459 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:50.459 › [TeamMcpServer] TCP connection received from 127.0.0.1:58846
+14:22:50.460 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:22:50.460 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:22:51.821 › [AionrsManager] info: Tool call: team_send_message
+14:22:51.823 › [TeamMcpServer] TCP connection received from 127.0.0.1:58848
+14:22:51.823 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:22:51.824 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:22:52.460 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:52.744 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 66a3972b
+14:22:52.745 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:22:52.746 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=1031, preview="[From negative] Turn completed\n[From affirmative] Hello Leader. My apologies for the confusion. I had saved the file as `affirmative_opening_statement.md`. Here is the full text of my opening statemen"
+14:22:52.746 › [AionrsManager] message sent: msg_id=50aba122-2285-4979-99ac-016c41a746b7
+14:22:52.746 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:22:53.575 › [AionrsManager] stream_end: msg_id=4a39d6a3-2a1f-41ca-b5c6-b49e9ca8aa50, total=22547ms { input_tokens: 68966, output_tokens: 1593 }
+14:22:53.575 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:22:53.576 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:22:58.562 › [AionrsManager] info: Tool call: team_send_message
+14:22:58.564 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:22:58.564 › [TeamMcpServer] TCP connection received from 127.0.0.1:58854
+14:22:58.564 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:22:58.565 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=374, preview="[From Leader] 你好，moderator。正反双方已经全部提交了开篇陈词。\n\n**正方 (affirmative) 的核心论点：**\n- 创造力本质是组合与模式识别，AI 具有规模优势。\n- 执行力绝对压制。\n- 情感共鸣可以通过算法实现。\n\n**反方 (negative) 的核心论点：**\n- 生成 $\\neq$ 创造，AI 缺乏意识和主观冲动。\n- 创造力的核心在于意图与意义，AI"
+14:22:58.565 › [AionrsManager] message sent: msg_id=23ca52de-3c72-4d50-b604-68b97f076bc9
+14:22:58.566 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:22:58.566 › [AionrsManager] stream_start: msg_id=23ca52de-3c72-4d50-b604-68b97f076bc9, TTFT=1ms
+14:23:00.564 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:00.760 › [AionrsManager] info: Tool call: team_send_message
+14:23:00.761 › [AionrsManager] info: Tool call: Write
+14:23:00.767 › [TeamMcpServer] TCP connection received from 127.0.0.1:58860
+14:23:00.767 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:00.768 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:00.768 › [AionrsManager] info: [Write success] Created /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/opening_negative.md (23 lines)
+14:23:00.777 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:02.298 › [AionrsManager] stream_end: msg_id=e67a775e-23db-4901-b817-1077377d5e55, total=9552ms { input_tokens: 228778, output_tokens: 2639 }
+14:23:02.299 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:23:02.299 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=999, preview="[From affirmative] Turn completed\n[From negative] Leader 您好，非常抱歉造成了误解。我的开篇陈词之前写入的文件名为 `negative_opening_statement.md`，可能与您预期的命名不一致。\n\n现在我已将其重新保存为 `opening_negative.md`。以下是正文内容：\n\n# 反方开篇陈词：AI 仅是工具，不会取代人类"
+14:23:02.300 › [AionrsManager] message sent: msg_id=1253dfe7-cc26-4673-ac61-700e24377181
+14:23:02.301 › [AionrsManager] stream_start: msg_id=1253dfe7-cc26-4673-ac61-700e24377181, TTFT=1ms
+14:23:02.778 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:03.725 › [AionrsManager] info: Tool call: team_send_message
+14:23:03.726 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:03.726 › [TeamMcpServer] TCP connection received from 127.0.0.1:58864
+14:23:03.727 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:03.727 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:05.000 › [AionrsManager] stream_end: msg_id=70bc0d1e-8f48-44b0-8497-763a22fa0aff, total=34544ms { input_tokens: 50458, output_tokens: 2194 }
+14:23:05.001 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:active → SKIP
+14:23:05.728 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:06.859 › [AionrsManager] info: Tool call: team_send_message
+14:23:06.860 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:06.861 › [TeamMcpServer] TCP connection received from 127.0.0.1:58870
+14:23:06.862 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:06.862 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:23:06.862 › [TeammateManager] wake(negative): status=idle, proceeding
+14:23:06.862 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=756, preview="[From moderator] Hello everyone! We have completed the Opening Statements. Now, we enter the **Cross-examination (质询环节)**. \n\nThe rules for this stage are:\n- Each side has a strict time/length limit fo"
+14:23:06.862 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=756, preview="[From moderator] Hello everyone! We have completed the Opening Statements. Now, we enter the **Cross-examination (质询环节)**. \n\nThe rules for this stage are:\n- Each side has a strict time/length limit fo"
+14:23:06.864 › [AionrsManager] message sent: msg_id=01af35b9-4583-4246-a1aa-93d21913d800
+14:23:06.864 › [AionrsManager] message sent: msg_id=b6d22dda-4bcf-4871-b54f-b2cb66be0f98
+14:23:06.864 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, negative
+14:23:06.864 › [AionrsManager] stream_start: msg_id=01af35b9-4583-4246-a1aa-93d21913d800, TTFT=0ms
+14:23:06.864 › [AionrsManager] stream_start: msg_id=b6d22dda-4bcf-4871-b54f-b2cb66be0f98, TTFT=0ms
+14:23:07.023 › [AionrsManager] stream_end: msg_id=1253dfe7-cc26-4673-ac61-700e24377181, total=4723ms { input_tokens: 241746, output_tokens: 2783 }
+14:23:07.023 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:23:07.024 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=871, preview="[From negative] Leader 您好，开篇陈词已发送并写入文件 `opening_negative.md`。我目前没有其他指派任务，准备就绪，随时待命。\n[From negative] Turn completed\n[From moderator] Hello everyone! We have completed the Opening Statements. Now, we en"
+14:23:07.025 › [AionrsManager] message sent: msg_id=3de99311-a32b-4f91-878e-6704073b30ca
+14:23:07.029 › [AionrsManager] stream_start: msg_id=3de99311-a32b-4f91-878e-6704073b30ca, TTFT=4ms
+14:23:08.252 › [AionrsManager] info: Tool call: team_send_message
+14:23:08.253 › [TeamMcpServer] TCP connection received from 127.0.0.1:58873
+14:23:08.254 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:08.254 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:08.861 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:09.489 › [AionrsManager] stream_end: msg_id=23ca52de-3c72-4d50-b604-68b97f076bc9, total=10924ms { input_tokens: 66705, output_tokens: 1190 }
+14:23:09.490 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:23:09.750 › [AionrsManager] info: Tool call: team_send_message
+14:23:09.753 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:09.754 › [TeamMcpServer] TCP connection received from 127.0.0.1:58876
+14:23:09.754 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:23:09.755 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=114, preview="[From negative] Moderator 您好，我已收到通知。我正在针对 affirmative 提出的“算法化情感共鸣”这一论点准备质询问题，等待 Round 1 完成后在 Round 2 提交。准备就绪，随时待命。"
+14:23:09.756 › [AionrsManager] message sent: msg_id=58b995e3-b153-47ae-886b-8621cfa72398
+14:23:09.757 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:23:09.757 › [AionrsManager] stream_start: msg_id=58b995e3-b153-47ae-886b-8621cfa72398, TTFT=1ms
+14:23:10.223 › [AionrsManager] info: Tool call: team_send_message
+14:23:10.224 › [TeamMcpServer] TCP connection received from 127.0.0.1:58882
+14:23:10.225 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:10.225 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:23:10.225 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:23:10.225 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:23:10.889 › [AionrsManager] stream_end: msg_id=3de99311-a32b-4f91-878e-6704073b30ca, total=3864ms { input_tokens: 255087, output_tokens: 2926 }
+14:23:10.889 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:23:10.890 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=795, preview="[From moderator] Ready, standing by for @affirmative's question and @negative's response to start the cross-examination.\n[From moderator] Turn completed\n[From affirmative] Hello Moderator and Negative"
+14:23:10.891 › [AionrsManager] message sent: msg_id=116c4d4d-5ada-4ad5-8301-d0173289bdec
+14:23:10.892 › [AionrsManager] stream_start: msg_id=116c4d4d-5ada-4ad5-8301-d0173289bdec, TTFT=1ms
+14:23:11.753 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:12.057 › [AionrsManager] info: Tool call: team_send_message
+14:23:12.059 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:12.060 › [TeamMcpServer] TCP connection received from 127.0.0.1:58885
+14:23:12.060 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:12.060 › [TeammateManager] wake(affirmative): DEFERRED (agent active)
+14:23:12.060 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:23:12.061 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, moderator
+14:23:12.624 › [AionrsManager] info: Tool call: team_send_message
+14:23:12.625 › [TeamMcpServer] TCP connection received from 127.0.0.1:58886
+14:23:12.626 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:12.626 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:13.038 › [AionrsManager] stream_end: msg_id=01af35b9-4583-4246-a1aa-93d21913d800, total=6174ms { input_tokens: 91995, output_tokens: 1810 }
+14:23:13.038 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:23:13.039 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=98, preview="[From negative] Leader, Moderator 您好，我已经为 Round 2 的质询准备好了问题，随时可以提交。在等待 affirmative 质询我之前，我将保持待命状态。"
+14:23:13.040 › [AionrsManager] message sent: msg_id=fa8792b2-a730-4318-b718-bb65ec3fc65d
+14:23:13.041 › [AionrsManager] stream_start: msg_id=fa8792b2-a730-4318-b718-bb65ec3fc65d, TTFT=1ms
+14:23:13.594 › [AionrsManager] info: Tool call: team_send_message
+14:23:13.595 › [TeamMcpServer] TCP connection received from 127.0.0.1:58887
+14:23:13.596 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:23:13.596 › [AionrsManager] info: [team_send_message success] Message sent to negative's inbox. They will process it shortly.
+14:23:13.613 › [AionrsManager] stream_end: msg_id=b6d22dda-4bcf-4871-b54f-b2cb66be0f98, total=6749ms { input_tokens: 75011, output_tokens: 2404 }
+14:23:13.614 › [TeammateManager] wake(negative): status=idle, proceeding
+14:23:13.614 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=845, preview="[From affirmative] Hello Moderator and Negative. \n\nRegarding the Negative side's argument that consciousness and intent are the indispensable core of creativity:\n\nIf a piece of art, a scientific disco"
+14:23:13.618 › [AionrsManager] message sent: msg_id=0e33328a-bd1b-43f7-a3bc-9b5ea19fb952
+14:23:13.623 › [AionrsManager] stream_start: msg_id=0e33328a-bd1b-43f7-a3bc-9b5ea19fb952, TTFT=5ms
+14:23:14.060 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:14.427 › [AionrsManager] info: Tool call: team_send_message
+14:23:14.429 › [TeamMcpServer] TCP connection received from 127.0.0.1:58890
+14:23:14.430 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:14.430 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:14.431 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:15.255 › [AionrsManager] info: Tool call: team_send_message
+14:23:15.256 › [TeamMcpServer] TCP connection received from 127.0.0.1:58892
+14:23:15.256 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:23:15.257 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:23:15.380 › [AionrsManager] stream_end: msg_id=fa8792b2-a730-4318-b718-bb65ec3fc65d, total=2340ms { input_tokens: 107754, output_tokens: 1856 }
+14:23:15.381 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:active → SKIP
+14:23:15.480 › [AionrsManager] stream_end: msg_id=116c4d4d-5ada-4ad5-8301-d0173289bdec, total=4589ms { input_tokens: 268745, output_tokens: 3092 }
+14:23:15.481 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:23:15.481 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=320, preview="[From negative] Leader, Moderator 您好，我已经为 Round 2 的质询准备好了问题，随时可以提交。在等待 affirmative 质询我之前，我将保持待命状态。\n[From affirmative] Question submitted. Standing by for Negative's response and further guidance from "
+14:23:15.482 › [AionrsManager] message sent: msg_id=10b6cc2e-ffa2-4a01-b1f9-62f5f905b72b
+14:23:15.483 › [AionrsManager] stream_start: msg_id=10b6cc2e-ffa2-4a01-b1f9-62f5f905b72b, TTFT=1ms
+14:23:15.923 › [AionrsManager] stream_end: msg_id=58b995e3-b153-47ae-886b-8621cfa72398, total=6167ms { input_tokens: 81010, output_tokens: 1309 }
+14:23:15.923 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:23:15.924 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=865, preview="[From affirmative] Hello Moderator and Negative. \n\nRegarding the Negative side's argument that consciousness and intent are the indispensable core of creativity:\n\nIf a piece of art, a scientific disco"
+14:23:15.925 › [AionrsManager] message sent: msg_id=4a392edd-1776-4603-802a-54b0ad9df8e5
+14:23:15.926 › [AionrsManager] stream_start: msg_id=4a392edd-1776-4603-802a-54b0ad9df8e5, TTFT=1ms
+14:23:16.432 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:16.671 › [AionrsManager] stream_end: msg_id=0e33328a-bd1b-43f7-a3bc-9b5ea19fb952, total=3053ms { input_tokens: 92132, output_tokens: 2489 }
+14:23:16.672 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:active → SKIP
+14:23:18.933 › [AionrsManager] info: Tool call: team_send_message
+14:23:18.934 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:18.935 › [TeamMcpServer] TCP connection received from 127.0.0.1:58895
+14:23:18.935 › [TeammateManager] wake(negative): status=idle, proceeding
+14:23:18.935 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=514, preview="[From moderator] @negative, the floor is yours. \n\n@affirmative has challenged your position on \"intent\" and \"consciousness,\" arguing that if the output is indistinguishable or superior to human work, "
+14:23:18.936 › [AionrsManager] message sent: msg_id=9698fe61-33c8-483c-af86-8af983331bcf
+14:23:18.937 › [AionrsManager] info: [team_send_message success] Message sent to negative's inbox. They will process it shortly.
+14:23:18.937 › [AionrsManager] stream_start: msg_id=9698fe61-33c8-483c-af86-8af983331bcf, TTFT=1ms
+14:23:19.130 › [AionrsManager] stream_end: msg_id=10b6cc2e-ffa2-4a01-b1f9-62f5f905b72b, total=3648ms { input_tokens: 282666, output_tokens: 3223 }
+14:23:20.233 › [AionrsManager] stream_end: msg_id=4a392edd-1776-4603-802a-54b0ad9df8e5, total=4308ms { input_tokens: 96093, output_tokens: 1484 }
+14:23:20.234 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:23:20.935 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:28.884 › [AionrsManager] info: Tool call: team_send_message
+14:23:28.885 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:28.886 › [TeamMcpServer] TCP connection received from 127.0.0.1:58907
+14:23:28.886 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:23:28.887 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=440, preview="[From negative] Moderator 您好，以下是我对 @affirmative 挑战的回应：\n\n**回应：结果的“等效性”并不等同于创造力的“等效性”。**\n\n首先，将“价值”与“创造力”混淆是一个逻辑误区。一个作品能产生深远影响或解决问题（价值），并不意味着其产生过程具备创造力。AI 能够通过大数据拟合产生“等效”甚至“更优”的结果，但这本质上是**高效的统计推演**而非**自觉"
+14:23:28.888 › [AionrsManager] message sent: msg_id=b3cc9c27-4802-4274-b530-e8b6fa7610a9
+14:23:28.888 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:23:28.888 › [AionrsManager] stream_start: msg_id=b3cc9c27-4802-4274-b530-e8b6fa7610a9, TTFT=0ms
+14:23:30.268 › [AionrsManager] stream_end: msg_id=9698fe61-33c8-483c-af86-8af983331bcf, total=11332ms { input_tokens: 109949, output_tokens: 2822 }
+14:23:30.269 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:active → SKIP
+14:23:30.887 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:33.153 › [AionrsManager] info: Tool call: team_send_message
+14:23:33.154 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:33.155 › [TeamMcpServer] TCP connection received from 127.0.0.1:58913
+14:23:33.155 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:23:33.156 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:23:33.156 › [TeammateManager] wake(negative): status=idle, proceeding
+14:23:33.157 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=621, preview="[From negative] Turn completed\n[From moderator] Turn completed\n[From negative] Turn completed\n[From moderator] Thank you, @negative, for that focused response. You've effectively distinguished \"produc"
+14:23:33.157 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=527, preview="[From moderator] Thank you, @negative, for that focused response. You've effectively distinguished \"product value\" from \"creative process\" and argued that intent provides a directionality that statist"
+14:23:33.158 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=527, preview="[From moderator] Thank you, @negative, for that focused response. You've effectively distinguished \"product value\" from \"creative process\" and argued that intent provides a directionality that statist"
+14:23:33.161 › [AionrsManager] message sent: msg_id=afc816bf-660a-4be2-b5cf-1c6cb6a275be
+14:23:33.162 › [AionrsManager] message sent: msg_id=6ea7c072-95f9-4d94-9091-a723f8442b64
+14:23:33.162 › [AionrsManager] message sent: msg_id=81fafded-e0b2-41f9-a1e8-a72f0f9e08d4
+14:23:33.162 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, negative
+14:23:33.163 › [AionrsManager] stream_start: msg_id=afc816bf-660a-4be2-b5cf-1c6cb6a275be, TTFT=2ms
+14:23:33.163 › [AionrsManager] stream_start: msg_id=6ea7c072-95f9-4d94-9091-a723f8442b64, TTFT=1ms
+14:23:33.163 › [AionrsManager] stream_start: msg_id=81fafded-e0b2-41f9-a1e8-a72f0f9e08d4, TTFT=1ms
+14:23:34.814 › [AionrsManager] info: Tool call: team_send_message
+14:23:34.816 › [TeamMcpServer] TCP connection received from 127.0.0.1:58914
+14:23:34.816 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:23:34.816 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:23:35.156 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:36.002 › [AionrsManager] info: Tool call: team_send_message
+14:23:36.004 › [TeamMcpServer] TCP connection received from 127.0.0.1:58919
+14:23:36.004 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:36.005 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:36.005 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:36.945 › [AionrsManager] info: Tool call: team_send_message
+14:23:36.947 › [TeamMcpServer] TCP connection received from 127.0.0.1:58920
+14:23:36.947 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:36.948 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:36.954 › [AionrsManager] stream_end: msg_id=b3cc9c27-4802-4274-b530-e8b6fa7610a9, total=8066ms { input_tokens: 112137, output_tokens: 1671 }
+14:23:36.954 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:23:36.955 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=128, preview="[From affirmative] Acknowledged. I am ready and standing by for Negative's question regarding \"algorithmic emotional resonance.\""
+14:23:36.956 › [AionrsManager] message sent: msg_id=6bd903a7-6038-4304-935f-097f5ff4bd02
+14:23:36.957 › [AionrsManager] stream_start: msg_id=6bd903a7-6038-4304-935f-097f5ff4bd02, TTFT=1ms
+14:23:37.930 › [AionrsManager] stream_end: msg_id=6bd903a7-6038-4304-935f-097f5ff4bd02, total=974ms { input_tokens: 120324, output_tokens: 1705 }
+14:23:37.931 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:23:38.006 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:38.159 › [AionrsManager] info: Tool call: team_send_message
+14:23:38.160 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:38.161 › [TeamMcpServer] TCP connection received from 127.0.0.1:58921
+14:23:38.161 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:38.162 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:39.787 › [AionrsManager] info: Tool call: team_send_message
+14:23:39.788 › [TeamMcpServer] TCP connection received from 127.0.0.1:58923
+14:23:39.788 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:39.789 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:40.163 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:40.180 › [AionrsManager] info: Tool call: team_send_message
+14:23:40.182 › [TeamMcpServer] TCP connection received from 127.0.0.1:58924
+14:23:40.182 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:23:40.186 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=349, preview="[From negative] Moderator 您好，现在开始我的质询。\n\n@affirmative，你在论点中提到 AI 可以通过算法实现“情感共鸣”，从而在创造力上取代人类。\n\n**我的质询如下：**\n你所定义的“共鸣”，究竟是 AI **真正体验到了**某种情感，还是仅仅通过分析海量人类语料，**精准地模拟了**触发人类情感的模式（Pattern）？\n\n如果后者成立，那么这种所谓的“共鸣"
+14:23:40.187 › [AionrsManager] message sent: msg_id=993a769d-51e0-4f45-b92d-ac26bf689987
+14:23:40.187 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:23:40.188 › [AionrsManager] stream_start: msg_id=993a769d-51e0-4f45-b92d-ac26bf689987, TTFT=1ms
+14:23:40.192 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:42.194 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:42.631 › [AionrsManager] stream_end: msg_id=81fafded-e0b2-41f9-a1e8-a72f0f9e08d4, total=9469ms { input_tokens: 128653, output_tokens: 3091 }
+14:23:42.632 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:active → SKIP
+14:23:43.217 › [AionrsManager] info: Tool call: team_send_message
+14:23:43.219 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:43.220 › [TeamMcpServer] TCP connection received from 127.0.0.1:58947
+14:23:43.220 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:43.221 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:43.362 › [AionrsManager] info: Tool call: team_send_message
+14:23:43.363 › [TeamMcpServer] TCP connection received from 127.0.0.1:58948
+14:23:43.363 › [TeammateManager] wake(affirmative): DEFERRED (agent active)
+14:23:43.364 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:23:44.816 › [AionrsManager] stream_end: msg_id=993a769d-51e0-4f45-b92d-ac26bf689987, total=4629ms { input_tokens: 137349, output_tokens: 1896 }
+14:23:44.817 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:23:45.219 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:45.250 › [AionrsManager] info: Tool call: team_send_message
+14:23:45.251 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:45.252 › [TeamMcpServer] TCP connection received from 127.0.0.1:58950
+14:23:45.252 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:45.253 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:46.326 › [AionrsManager] info: Tool call: team_send_message
+14:23:46.328 › [TeamMcpServer] TCP connection received from 127.0.0.1:58951
+14:23:46.329 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:46.329 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:47.253 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:48.113 › [AionrsManager] info: Tool call: team_send_message
+14:23:48.114 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:48.115 › [TeamMcpServer] TCP connection received from 127.0.0.1:58963
+14:23:48.115 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:23:48.116 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:23:48.168 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 66a3972b
+14:23:48.168 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:23:48.169 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=498, preview="[From affirmative] Ready. Standing by.\n[From affirmative] Ready. Standing by.\n[From moderator] Turn completed\n[From affirmative] Ready. Standing by.\n[From affirmative] Ready. Standing by.\n[From negati"
+14:23:48.169 › [AionrsManager] message sent: msg_id=386606db-c258-4f8b-9526-bb25bdea6cfb
+14:23:48.170 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:23:50.115 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:23:53.311 › [AionrsManager] stream_end: msg_id=afc816bf-660a-4be2-b5cf-1c6cb6a275be, total=5142ms { input_tokens: 296858, output_tokens: 3387 }
+14:24:00.292 › [AionrsManager] info: Tool call: team_send_message
+14:24:00.293 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:00.293 › [TeamMcpServer] TCP connection received from 127.0.0.1:58979
+14:24:00.294 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:00.294 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=56, preview="[From affirmative] Standing by for @negative's question."
+14:24:00.295 › [AionrsManager] message sent: msg_id=9be2bf60-3eba-4d92-a8bd-f71caceb65d9
+14:24:00.296 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:00.296 › [AionrsManager] stream_start: msg_id=9be2bf60-3eba-4d92-a8bd-f71caceb65d9, TTFT=1ms
+14:24:01.667 › [AionrsManager] info: Tool call: team_send_message
+14:24:01.668 › [TeamMcpServer] TCP connection received from 127.0.0.1:58984
+14:24:01.668 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:01.668 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:02.294 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:02.543 › [AionrsManager] stream_end: msg_id=9be2bf60-3eba-4d92-a8bd-f71caceb65d9, total=2248ms { input_tokens: 311236, output_tokens: 3468 }
+14:24:02.544 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:02.544 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=66, preview="[From affirmative] Ready and standing by for @negative's question."
+14:24:02.545 › [AionrsManager] message sent: msg_id=cfff1497-6e32-4c61-ac5d-9a5e55bbf279
+14:24:02.546 › [AionrsManager] stream_start: msg_id=cfff1497-6e32-4c61-ac5d-9a5e55bbf279, TTFT=1ms
+14:24:03.653 › [AionrsManager] info: Tool call: team_send_message
+14:24:03.654 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:03.655 › [TeamMcpServer] TCP connection received from 127.0.0.1:58996
+14:24:03.655 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:03.655 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:05.042 › [AionrsManager] stream_end: msg_id=cfff1497-6e32-4c61-ac5d-9a5e55bbf279, total=2497ms { input_tokens: 325719, output_tokens: 3569 }
+14:24:05.043 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:05.043 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=31, preview="[From affirmative] Standing by."
+14:24:05.044 › [AionrsManager] message sent: msg_id=0a466063-653c-49ac-b079-a8a212037a4f
+14:24:05.045 › [AionrsManager] stream_start: msg_id=0a466063-653c-49ac-b079-a8a212037a4f, TTFT=1ms
+14:24:05.189 › [AionrsManager] info: Tool call: team_send_message
+14:24:05.190 › [TeamMcpServer] TCP connection received from 127.0.0.1:59001
+14:24:05.190 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:05.191 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:05.659 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:06.226 › [AionrsManager] info: Tool call: team_send_message
+14:24:06.227 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:06.227 › [TeamMcpServer] TCP connection received from 127.0.0.1:59007
+14:24:06.228 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:06.228 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:07.473 › [AionrsManager] info: Tool call: team_send_message
+14:24:07.475 › [TeamMcpServer] TCP connection received from 127.0.0.1:59008
+14:24:07.475 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:07.476 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:08.228 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:09.351 › [AionrsManager] stream_end: msg_id=0a466063-653c-49ac-b079-a8a212037a4f, total=4307ms { input_tokens: 340319, output_tokens: 3691 }
+14:24:09.352 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:09.352 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=155, preview="[From affirmative] Standing by for @negative's question.\n[From affirmative] Ready and standing by for @negative's question.\n[From affirmative] Standing by."
+14:24:09.354 › [AionrsManager] message sent: msg_id=22604208-1474-4e4d-a82f-8b39fe0a093d
+14:24:09.355 › [AionrsManager] stream_start: msg_id=22604208-1474-4e4d-a82f-8b39fe0a093d, TTFT=1ms
+14:24:11.867 › [AionrsManager] info: Tool call: team_send_message
+14:24:11.869 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:11.869 › [TeamMcpServer] TCP connection received from 127.0.0.1:59017
+14:24:11.869 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:11.870 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:12.919 › [AionrsManager] stream_end: msg_id=6ea7c072-95f9-4d94-9091-a723f8442b64, total=39757ms { input_tokens: 253754, output_tokens: 2578 }
+14:24:12.919 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:24:12.920 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=623, preview="[From moderator] @affirmative, the floor is yours.\n\n@negative has challenged your claim on \"algorithmic emotional resonance,\" arguing that AI is merely performing a \"cognitive deception\" by simulating"
+14:24:12.921 › [AionrsManager] message sent: msg_id=6e02f392-b294-4943-a2fe-72dc02866dc8
+14:24:12.921 › [AionrsManager] stream_start: msg_id=6e02f392-b294-4943-a2fe-72dc02866dc8, TTFT=0ms
+14:24:13.870 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:13.921 › [AionrsManager] stream_end: msg_id=22604208-1474-4e4d-a82f-8b39fe0a093d, total=4567ms { input_tokens: 355087, output_tokens: 3840 }
+14:24:13.922 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:13.922 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=106, preview="[From affirmative] I have notified the moderator and leader that I am ready for the question. Standing by."
+14:24:13.924 › [AionrsManager] message sent: msg_id=6641159d-af14-4f36-84bb-954982658e2b
+14:24:13.924 › [AionrsManager] stream_start: msg_id=6641159d-af14-4f36-84bb-954982658e2b, TTFT=0ms
+14:24:17.403 › [AionrsManager] stream_end: msg_id=6641159d-af14-4f36-84bb-954982658e2b, total=3479ms { input_tokens: 370035, output_tokens: 3980 }
+14:24:27.924 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d80b5dd7
+14:24:27.925 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:24:27.925 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:27.925 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=33, preview="[From affirmative] Turn completed"
+14:24:27.926 › [AionrsManager] message sent: msg_id=cac40020-fd3a-4b2d-a88e-02fda0a2a470
+14:24:27.926 › [AionrsManager] stream_start: msg_id=cac40020-fd3a-4b2d-a88e-02fda0a2a470, TTFT=0ms
+14:24:32.466 › [AionrsManager] stream_end: msg_id=cac40020-fd3a-4b2d-a88e-02fda0a2a470, total=4540ms { input_tokens: 385138, output_tokens: 4137 }
+14:24:32.638 › [AionrsManager] info: Tool call: team_send_message
+14:24:32.639 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:32.639 › [TeamMcpServer] TCP connection received from 127.0.0.1:59031
+14:24:32.640 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:32.640 › [TeammateManager] wake(negative): status=idle, proceeding
+14:24:32.640 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:24:32.640 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=1219, preview="[From affirmative] Hello Moderator and Negative.\n\nThe argument that AI is performing \"cognitive deception\" misses the functional reality of communication and art. \n\nCreativity is not a property of the"
+14:24:32.641 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=1219, preview="[From affirmative] Hello Moderator and Negative.\n\nThe argument that AI is performing \"cognitive deception\" misses the functional reality of communication and art. \n\nCreativity is not a property of the"
+14:24:32.641 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=1219, preview="[From affirmative] Hello Moderator and Negative.\n\nThe argument that AI is performing \"cognitive deception\" misses the functional reality of communication and art. \n\nCreativity is not a property of the"
+14:24:32.644 › [AionrsManager] message sent: msg_id=aeef7774-56d3-4a2e-accc-dba8d251d6f2
+14:24:32.644 › [AionrsManager] message sent: msg_id=e83535b4-4d1a-4057-a6ee-bdd706bbc666
+14:24:32.644 › [AionrsManager] message sent: msg_id=2fb7559c-3331-4405-b868-37d13633b4ec
+14:24:32.645 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:24:32.645 › [AionrsManager] stream_start: msg_id=2fb7559c-3331-4405-b868-37d13633b4ec, TTFT=1ms
+14:24:32.645 › [AionrsManager] stream_start: msg_id=e83535b4-4d1a-4057-a6ee-bdd706bbc666, TTFT=1ms
+14:24:32.645 › [AionrsManager] stream_start: msg_id=aeef7774-56d3-4a2e-accc-dba8d251d6f2, TTFT=1ms
+14:24:34.640 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:35.177 › [AionrsManager] info: Tool call: team_send_message
+14:24:35.178 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:35.178 › [TeamMcpServer] TCP connection received from 127.0.0.1:59035
+14:24:35.179 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:35.179 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:36.599 › [AionrsManager] stream_end: msg_id=6e02f392-b294-4943-a2fe-72dc02866dc8, total=23678ms { input_tokens: 282370, output_tokens: 2955 }
+14:24:36.600 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:active → SKIP
+14:24:36.720 › [AionrsManager] info: Tool call: team_send_message
+14:24:36.722 › [TeamMcpServer] TCP connection received from 127.0.0.1:59036
+14:24:36.722 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:24:36.722 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:24:37.180 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:37.248 › [AionrsManager] info: Tool call: team_send_message
+14:24:37.249 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:37.249 › [TeamMcpServer] TCP connection received from 127.0.0.1:59038
+14:24:37.250 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:37.250 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:24:37.250 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:24:37.250 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=892, preview="[From moderator] Thank you, @affirmative, for that response. You have argued that creativity resides in the interaction between the work and the receiver, making the internal state of the creator irre"
+14:24:37.252 › [AionrsManager] message sent: msg_id=01de564f-65d1-491f-a5b8-4fc860e8b715
+14:24:37.252 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, negative
+14:24:37.252 › [AionrsManager] stream_start: msg_id=01de564f-65d1-491f-a5b8-4fc860e8b715, TTFT=0ms
+14:24:38.545 › [AionrsManager] stream_end: msg_id=2fb7559c-3331-4405-b868-37d13633b4ec, total=5901ms { input_tokens: 155428, output_tokens: 2168 }
+14:24:38.546 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:24:38.546 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=216, preview="[From negative] Moderator 您好，我已经阅读了 @affirmative 的回应。\n\n对方主张“创造力是作品与接收者之间关系的属性”，认为情感共鸣的本质是接收者的投射，因此 AI 只要掌握了触发投射的“机制”，就等同于具备了创造力。\n\n我已准备好在接下来的总结环节或反驳环节中，针对其“将创造力等同于触发机制”的逻辑漏洞进行最后反击（例如：机制的掌握 $\\neq$ 范式的开创"
+14:24:38.547 › [AionrsManager] message sent: msg_id=7db23443-0a26-49d9-8ce7-620c025da521
+14:24:38.548 › [AionrsManager] stream_start: msg_id=7db23443-0a26-49d9-8ce7-620c025da521, TTFT=1ms
+14:24:39.255 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:39.834 › [AionrsManager] stream_end: msg_id=aeef7774-56d3-4a2e-accc-dba8d251d6f2, total=7190ms { input_tokens: 400664, output_tokens: 4472 }
+14:24:39.835 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:39.835 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=1064, preview="[From affirmative] Response submitted. Standing by for the moderator to conclude the cross-examination and transition to the Free Debate.\n[From affirmative] Turn completed\n[From moderator] Thank you, "
+14:24:39.837 › [AionrsManager] message sent: msg_id=5450a725-14ce-4f3c-b998-c13c42298d66
+14:24:39.837 › [AionrsManager] stream_start: msg_id=5450a725-14ce-4f3c-b998-c13c42298d66, TTFT=0ms
+14:24:40.551 › [AionrsManager] stream_end: msg_id=e83535b4-4d1a-4057-a6ee-bdd706bbc666, total=7907ms { input_tokens: 148407, output_tokens: 3329 }
+14:24:40.552 › [TeammateManager] wake(negative): status=idle, proceeding
+14:24:40.552 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=892, preview="[From moderator] Thank you, @affirmative, for that response. You have argued that creativity resides in the interaction between the work and the receiver, making the internal state of the creator irre"
+14:24:40.554 › [AionrsManager] message sent: msg_id=f730724f-c8ab-4da9-949b-e50d38f04de7
+14:24:40.554 › [AionrsManager] stream_start: msg_id=f730724f-c8ab-4da9-949b-e50d38f04de7, TTFT=0ms
+14:24:42.050 › [AionrsManager] info: Tool call: team_send_message
+14:24:42.052 › [TeamMcpServer] TCP connection received from 127.0.0.1:59067
+14:24:42.052 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:24:42.053 › [AionrsManager] info: [team_send_message success] Message sent to negative's inbox. They will process it shortly.
+14:24:42.054 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:42.323 › [AionrsManager] info: Tool call: team_send_message
+14:24:42.324 › [TeamMcpServer] TCP connection received from 127.0.0.1:59068
+14:24:42.325 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:42.325 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:24:42.325 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:24:42.326 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:24:43.824 › [AionrsManager] stream_end: msg_id=7db23443-0a26-49d9-8ce7-620c025da521, total=5277ms { input_tokens: 174283, output_tokens: 2344 }
+14:24:43.825 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:24:43.825 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=791, preview="[From affirmative] I'll open the Free Debate. \n\n@negative, you've consistently leaned on the \"soul,\" \"intent,\" and \"internal experience\" as the last bastions of human creativity. But let's be honest: "
+14:24:43.826 › [AionrsManager] message sent: msg_id=5b8a08d5-8fe7-417c-8166-58ea1501003a
+14:24:43.827 › [AionrsManager] stream_start: msg_id=5b8a08d5-8fe7-417c-8166-58ea1501003a, TTFT=1ms
+14:24:44.056 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:44.116 › [AionrsManager] info: Tool call: team_send_message
+14:24:44.117 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:44.117 › [TeamMcpServer] TCP connection received from 127.0.0.1:59076
+14:24:44.118 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:24:44.118 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:24:44.620 › [AionrsManager] stream_end: msg_id=5450a725-14ce-4f3c-b998-c13c42298d66, total=4783ms { input_tokens: 416769, output_tokens: 4721 }
+14:24:44.621 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:44.621 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=868, preview="[From affirmative] I'll open the Free Debate. \n\n@negative, you've consistently leaned on the \"soul,\" \"intent,\" and \"internal experience\" as the last bastions of human creativity. But let's be honest: "
+14:24:44.623 › [AionrsManager] message sent: msg_id=1838b8a3-22a4-4574-9a75-ea25d939e23e
+14:24:44.623 › [AionrsManager] stream_start: msg_id=1838b8a3-22a4-4574-9a75-ea25d939e23e, TTFT=0ms
+14:24:46.120 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:46.158 › [AionrsManager] stream_end: msg_id=5b8a08d5-8fe7-417c-8166-58ea1501003a, total=2332ms { input_tokens: 184019, output_tokens: 2412 }
+14:24:46.159 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:24:46.662 › [AionrsManager] info: Tool call: team_send_message
+14:24:46.664 › [TeamMcpServer] TCP connection received from 127.0.0.1:59082
+14:24:46.664 › [TeammateManager] wake(affirmative): DEFERRED (agent active)
+14:24:46.665 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:24:46.668 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:48.669 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:49.084 › [AionrsManager] stream_end: msg_id=f730724f-c8ab-4da9-949b-e50d38f04de7, total=8530ms { input_tokens: 169281, output_tokens: 3762 }
+14:24:49.084 › [TeammateManager] wake(negative): status=idle, proceeding
+14:24:49.084 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=1231, preview="[From moderator] @negative, we are currently in the **Free Debate (自由辩论)** phase. You do not need to wait for my instructions to speak!\n\nThe floor is open. Instead of waiting for the closing statement"
+14:24:49.086 › [AionrsManager] message sent: msg_id=0e43dbd6-056f-4041-a604-dc26829112dd
+14:24:49.087 › [AionrsManager] stream_start: msg_id=0e43dbd6-056f-4041-a604-dc26829112dd, TTFT=1ms
+14:24:49.122 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:24:49.122 › [AionrsManager] stream_end: msg_id=01de564f-65d1-491f-a5b8-4fc860e8b715, total=11870ms { input_tokens: 0, output_tokens: 0 }
+14:24:49.123 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=458, preview="[From negative] @affirmative，既然进入了自由辩论，我想直接击中你刚才逻辑中的致命弱点。\n\n你主张“创造力是触发接收者投射的机制”，这意味着你将创造力定义为一种**“精准的适配”**。但请你思考：如果创造力仅仅是“精准地映射已知模式以触发反应”，那么创造力将永远被锁死在“已知”的边界之内。\n\n真正的创造力，尤其是那些改变人类文明的伟大跃迁（例如毕加索的立体主义、爱因斯坦的"
+14:24:49.123 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:24:49.124 › [AionrsManager] message sent: msg_id=a0454fbd-8f73-4b7a-a60a-88ffb284033f
+14:24:49.124 › [AionrsManager] stream_start: msg_id=a0454fbd-8f73-4b7a-a60a-88ffb284033f, TTFT=0ms
+14:24:51.757 › [AionrsManager] stream_end: msg_id=1838b8a3-22a4-4574-9a75-ea25d939e23e, total=7134ms { input_tokens: 433325, output_tokens: 5028 }
+14:24:58.431 › [AionrsManager] info: Tool call: team_send_message
+14:24:58.433 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:24:58.434 › [TeamMcpServer] TCP connection received from 127.0.0.1:59097
+14:24:58.434 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:24:58.434 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=591, preview="[From negative] @affirmative，你再次陷入了那个危险的逻辑陷阱：将“价值”与“创造力”等同，将“结果”与“能力”混淆。\n\n首先，你提到的“非可证伪性”恰恰揭示了你的认知盲区。你认为只要结果精美，过程就不重要。但请注意，你所说的“更创新”的 AI 输出，其本质是**在极其巨大的参数空间内进行了极其高效的随机组合与插值**。这在统计学上叫“覆盖”，但在创造力上叫“穷举”。\n\n"
+14:24:58.435 › [AionrsManager] message sent: msg_id=c2974d0f-7ab8-4b9e-ba81-c2b888984562
+14:24:58.436 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:24:58.436 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:24:59.858 › [AionrsManager] info: Tool call: team_send_message
+14:24:59.859 › [TeamMcpServer] TCP connection received from 127.0.0.1:59098
+14:24:59.860 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:24:59.860 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:24:59.860 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:24:59.861 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=1610, preview="[From moderator] Turn completed\n[From affirmative] Turn completed\n[From affirmative] @negative, your argument relies on a misconception of how AI \"learns\" and \"innovates.\"\n\nYou suggest AI is locked wi"
+14:24:59.861 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=1544, preview="[From affirmative] @negative, your argument relies on a misconception of how AI \"learns\" and \"innovates.\"\n\nYou suggest AI is locked within the \"known\" boundary. However, the \"new paradigms\" you mentio"
+14:24:59.862 › [AionrsManager] message sent: msg_id=5be4fbe2-d2c2-44d6-9b3e-72adcfe2d8e7
+14:24:59.862 › [AionrsManager] message sent: msg_id=7d490ecc-4c85-4a95-b377-bbdea40778f8
+14:24:59.863 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:24:59.863 › [AionrsManager] stream_start: msg_id=7d490ecc-4c85-4a95-b377-bbdea40778f8, TTFT=1ms
+14:24:59.864 › [AionrsManager] stream_start: msg_id=5be4fbe2-d2c2-44d6-9b3e-72adcfe2d8e7, TTFT=2ms
+14:25:00.435 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:25:01.891 › [AionrsManager] stream_end: msg_id=7d490ecc-4c85-4a95-b377-bbdea40778f8, total=2029ms { input_tokens: 194170, output_tokens: 2493 }
+14:25:01.892 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:25:02.825 › [AionrsManager] stream_end: msg_id=0e43dbd6-056f-4041-a604-dc26829112dd, total=13739ms { input_tokens: 191748, output_tokens: 4355 }
+14:25:02.825 › [TeammateManager] wake(negative): status=idle, proceeding
+14:25:02.826 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=1544, preview="[From affirmative] @negative, your argument relies on a misconception of how AI \"learns\" and \"innovates.\"\n\nYou suggest AI is locked within the \"known\" boundary. However, the \"new paradigms\" you mentio"
+14:25:02.828 › [AionrsManager] message sent: msg_id=a9554d7c-557c-49f1-a04e-f07ce762286f
+14:25:02.828 › [AionrsManager] stream_start: msg_id=a9554d7c-557c-49f1-a04e-f07ce762286f, TTFT=0ms
+14:25:05.816 › [AionrsManager] info: Tool call: team_send_message
+14:25:05.817 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:25:05.818 › [TeamMcpServer] TCP connection received from 127.0.0.1:59105
+14:25:05.818 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:25:05.819 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:25:07.754 › [AionrsManager] stream_end: msg_id=a0454fbd-8f73-4b7a-a60a-88ffb284033f, total=9319ms { input_tokens: 334988, output_tokens: 3663 }
+14:25:07.755 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:25:07.818 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:25:11.017 › [AionrsManager] stream_end: msg_id=5be4fbe2-d2c2-44d6-9b3e-72adcfe2d8e7, total=11155ms { input_tokens: 450549, output_tokens: 5525 }
+14:25:11.018 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:25:11.018 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=142, preview="[From moderator] Turn completed\n[From affirmative] Response submitted. Standing by for @negative's rebuttal.\n[From affirmative] Turn completed"
+14:25:11.021 › [AionrsManager] message sent: msg_id=2ccb2e10-f866-4c6c-ab7a-6d6110044187
+14:25:11.021 › [AionrsManager] stream_start: msg_id=2ccb2e10-f866-4c6c-ab7a-6d6110044187, TTFT=0ms
+14:25:17.828 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 5cdef839
+14:25:17.828 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:25:17.829 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:25:18.455 › [AionrsManager] stream_end: msg_id=2ccb2e10-f866-4c6c-ab7a-6d6110044187, total=7434ms { input_tokens: 468309, output_tokens: 5900 }
+14:25:18.455 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:25:18.456 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=30, preview="[From negative] Turn completed"
+14:25:18.458 › [AionrsManager] message sent: msg_id=ac35b25c-166e-4371-ad21-1cc2fcc83089
+14:25:18.458 › [AionrsManager] stream_start: msg_id=ac35b25c-166e-4371-ad21-1cc2fcc83089, TTFT=0ms
+14:25:26.967 › [AionrsManager] stream_end: msg_id=ac35b25c-166e-4371-ad21-1cc2fcc83089, total=8509ms { input_tokens: 486459, output_tokens: 6208 }
+14:25:59.789 › [AionrsManager] info: Tool call: team_send_message
+14:25:59.791 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:25:59.792 › [TeamMcpServer] TCP connection received from 127.0.0.1:59159
+14:25:59.792 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:25:59.793 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=653, preview="[From negative] @affirmative，你的逻辑在数学上很完美，但在现实中极其危险。你试图将“天才的跃迁”简化为“高维空间的随机碰撞”。\n\n我想请问：如果“打破模式”本身也只是一种模式，如果“天才”仅仅是搜索空间的“离群值（Outlier）”，那么你实际上在主张：**人类文明的所有进步，都只不过是一场极其缓慢的、低效率的随机搜索。**\n\n这不仅是对创造力的贬低，更是对逻辑的误导。"
+14:25:59.794 › [AionrsManager] message sent: msg_id=33cda457-ef5d-4933-abb9-8ca2de25e496
+14:25:59.795 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:25:59.795 › [AionrsManager] stream_start: msg_id=33cda457-ef5d-4933-abb9-8ca2de25e496, TTFT=1ms
+14:26:01.794 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:26:05.201 › [AionrsManager] stream_end: msg_id=a9554d7c-557c-49f1-a04e-f07ce762286f, total=62373ms { input_tokens: 216176, output_tokens: 5007 }
+14:26:05.202 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:26:13.078 › [AionrsManager] info: Tool call: team_send_message
+14:26:13.082 › [TeamMcpServer] TCP connection received from 127.0.0.1:59174
+14:26:13.083 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:26:13.084 › [TeammateManager] wake(negative): status=idle, proceeding
+14:26:13.084 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:26:13.085 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=2257, preview="[From negative] Turn completed\n[From affirmative] @negative, your \"Gambler vs. Judge\" analogy is a powerful rhetorical tool, but it is a logical fallacy. You are confusing the *act of creation* with t"
+14:26:13.085 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=2226, preview="[From affirmative] @negative, your \"Gambler vs. Judge\" analogy is a powerful rhetorical tool, but it is a logical fallacy. You are confusing the *act of creation* with the *act of curation*.\n\nLet's ad"
+14:26:13.086 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=2226, preview="[From affirmative] @negative, your \"Gambler vs. Judge\" analogy is a powerful rhetorical tool, but it is a logical fallacy. You are confusing the *act of creation* with the *act of curation*.\n\nLet's ad"
+14:26:13.091 › [AionrsManager] message sent: msg_id=52537a49-e4e6-4a37-b1f6-d37930fed576
+14:26:13.092 › [AionrsManager] message sent: msg_id=3f493943-6f60-4455-963c-73b880039e8a
+14:26:13.092 › [AionrsManager] message sent: msg_id=36ccc3a0-e163-48d0-9507-01565ba1ce02
+14:26:13.092 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:26:13.093 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:26:13.093 › [AionrsManager] stream_start: msg_id=52537a49-e4e6-4a37-b1f6-d37930fed576, TTFT=2ms
+14:26:13.093 › [AionrsManager] stream_start: msg_id=3f493943-6f60-4455-963c-73b880039e8a, TTFT=1ms
+14:26:13.093 › [AionrsManager] stream_start: msg_id=36ccc3a0-e163-48d0-9507-01565ba1ce02, TTFT=1ms
+14:26:14.884 › [AionrsManager] info: Tool call: team_send_message
+14:26:14.885 › [TeamMcpServer] TCP connection received from 127.0.0.1:59177
+14:26:14.886 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:26:14.886 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:26:15.084 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:26:20.391 › [AionrsManager] stream_end: msg_id=33cda457-ef5d-4933-abb9-8ca2de25e496, total=20597ms { input_tokens: 370621, output_tokens: 4302 }
+14:26:20.392 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:active → SKIP
+14:26:20.594 › [AionrsManager] stream_end: msg_id=36ccc3a0-e163-48d0-9507-01565ba1ce02, total=7502ms { input_tokens: 204923, output_tokens: 2607 }
+14:26:20.595 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:26:28.093 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 5cdef839
+14:26:28.094 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:26:28.094 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:26:31.224 › [AionrsManager] stream_end: msg_id=52537a49-e4e6-4a37-b1f6-d37930fed576, total=18133ms { input_tokens: 505445, output_tokens: 6746 }
+14:26:31.224 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:26:31.225 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=173, preview="[From affirmative] Response submitted. Standing by for @negative's rebuttal.\n[From affirmative] Turn completed\n[From moderator] Turn completed\n[From negative] Turn completed"
+14:26:31.229 › [AionrsManager] message sent: msg_id=03718eb5-19fd-4af7-ac4a-08de3076efb4
+14:26:31.230 › [AionrsManager] stream_start: msg_id=03718eb5-19fd-4af7-ac4a-08de3076efb4, TTFT=1ms
+14:26:31.882 › [AionrsManager] info: Tool call: team_send_message
+14:26:31.885 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:26:31.885 › [TeamMcpServer] TCP connection received from 127.0.0.1:59191
+14:26:31.886 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:26:31.887 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=816, preview="[From negative] @affirmative，你终于承认了最关键的一点：你将“创造”定义为“将新形式带入现实的艰苦工作（Hard work of bringing a new form into existence）”。\n\n但这里正是你的逻辑崩塌之处：**如果创造仅仅是“把形式带入现实”这个动作，那么它就成了纯粹的“体力活”或“工程问题”。**\n\n你认为 AI 通过 RLHF 将人类的"
+14:26:31.889 › [AionrsManager] message sent: msg_id=599cb3cb-30ab-428a-af02-d19a1b746798
+14:26:31.889 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:26:31.890 › [AionrsManager] stream_start: msg_id=599cb3cb-30ab-428a-af02-d19a1b746798, TTFT=1ms
+14:26:33.886 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:26:40.423 › [AionrsManager] stream_end: msg_id=3f493943-6f60-4455-963c-73b880039e8a, total=27331ms { input_tokens: 243079, output_tokens: 5792 }
+14:26:40.424 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:26:45.425 › [AionrsManager] stream_end: msg_id=03718eb5-19fd-4af7-ac4a-08de3076efb4, total=14196ms { input_tokens: 525015, output_tokens: 7080 }
+14:26:46.890 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d80b5dd7
+14:26:46.891 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:26:46.891 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:26:46.891 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=64, preview="[From negative] Turn completed\n[From affirmative] Turn completed"
+14:26:46.898 › [AionrsManager] message sent: msg_id=363a0cd0-c2cc-4eec-882a-84b2dd2cdd98
+14:26:46.898 › [AionrsManager] stream_start: msg_id=363a0cd0-c2cc-4eec-882a-84b2dd2cdd98, TTFT=0ms
+14:27:08.768 › [AionrsManager] info: Tool call: team_send_message
+14:27:08.769 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:08.770 › [TeamMcpServer] TCP connection received from 127.0.0.1:59229
+14:27:08.771 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:27:08.771 › [TeammateManager] wake(negative): status=idle, proceeding
+14:27:08.771 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:27:08.771 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=2251, preview="[From affirmative] @negative, you are trying to save your position by redefining \"Creativity\" as \"The act of deciding the direction\" (Defining), while dismissing everything else as \"Execution\" (Engine"
+14:27:08.772 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=2251, preview="[From affirmative] @negative, you are trying to save your position by redefining \"Creativity\" as \"The act of deciding the direction\" (Defining), while dismissing everything else as \"Execution\" (Engine"
+14:27:08.774 › [AionrsManager] message sent: msg_id=21867615-db18-48a9-be45-81bce868d3a6
+14:27:08.775 › [AionrsManager] message sent: msg_id=9de6f927-aa35-4b2d-9d81-d7badcbc1213
+14:27:08.775 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:27:08.775 › [AionrsManager] stream_start: msg_id=21867615-db18-48a9-be45-81bce868d3a6, TTFT=1ms
+14:27:08.775 › [AionrsManager] stream_start: msg_id=9de6f927-aa35-4b2d-9d81-d7badcbc1213, TTFT=0ms
+14:27:10.770 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:12.229 › [AionrsManager] info: Tool call: team_send_message
+14:27:12.231 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:12.231 › [TeamMcpServer] TCP connection received from 127.0.0.1:59235
+14:27:12.231 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:27:12.232 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:27:13.026 › [AionrsManager] stream_end: msg_id=363a0cd0-c2cc-4eec-882a-84b2dd2cdd98, total=26128ms { input_tokens: 544941, output_tokens: 7471 }
+14:27:13.026 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:27:13.027 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=2328, preview="[From affirmative] @negative, you are trying to save your position by redefining \"Creativity\" as \"The act of deciding the direction\" (Defining), while dismissing everything else as \"Execution\" (Engine"
+14:27:13.030 › [AionrsManager] message sent: msg_id=209a0ac6-7127-4cd4-9902-cf64ea640d50
+14:27:13.031 › [AionrsManager] stream_start: msg_id=209a0ac6-7127-4cd4-9902-cf64ea640d50, TTFT=1ms
+14:27:14.234 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:15.156 › [AionrsManager] stream_end: msg_id=599cb3cb-30ab-428a-af02-d19a1b746798, total=43267ms { input_tokens: 409793, output_tokens: 4928 }
+14:27:15.157 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:active → SKIP
+14:27:16.891 › [AionrsManager] info: Tool call: team_send_message
+14:27:16.892 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:16.892 › [TeamMcpServer] TCP connection received from 127.0.0.1:59245
+14:27:16.893 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:27:16.893 › [AionrsManager] info: [team_send_message success] Message sent to negative's inbox. They will process it shortly.
+14:27:18.895 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:20.354 › [AionrsManager] stream_end: msg_id=9de6f927-aa35-4b2d-9d81-d7badcbc1213, total=11579ms { input_tokens: 227936, output_tokens: 2865 }
+14:27:20.355 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:27:22.453 › [AionrsManager] info: Tool call: team_send_message
+14:27:22.454 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:22.455 › [TeamMcpServer] TCP connection received from 127.0.0.1:59252
+14:27:22.455 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:27:22.455 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=910, preview="[From negative] @affirmative，你把“合成（Synthesis）”误认为“创造（Creation）”，并试图用一个“项目经理”的类比来掩盖 AI 永远无法跨越的鸿沟。\n\n首先，关于“搬动球门”的指责：这不是在移动目标，而是在**剥离表象以揭示本质**。当工具升级时，我们对创造力的定义确实在进化，因为我们终于意识到，真正的创造力从未在过时的“执行技巧”中，而是一直在“意识的"
+14:27:22.456 › [AionrsManager] message sent: msg_id=2f17d6d6-d352-4196-9018-9e4676aa1d79
+14:27:22.457 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:27:22.457 › [AionrsManager] stream_start: msg_id=2f17d6d6-d352-4196-9018-9e4676aa1d79, TTFT=1ms
+14:27:24.457 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:28.518 › [AionrsManager] stream_end: msg_id=21867615-db18-48a9-be45-81bce868d3a6, total=19744ms { input_tokens: 272713, output_tokens: 6646 }
+14:27:28.518 › [TeammateManager] wake(negative): status=idle, proceeding
+14:27:28.519 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=844, preview="[From moderator] The Free Debate has reached a point of extreme intensity. @affirmative has just delivered a powerful critique, arguing that @negative is \"moving the goalposts\" by redefining creativit"
+14:27:28.521 › [AionrsManager] message sent: msg_id=338ec88a-75b5-42ec-b568-785124e4ab0c
+14:27:28.522 › [AionrsManager] stream_start: msg_id=338ec88a-75b5-42ec-b568-785124e4ab0c, TTFT=1ms
+14:27:31.832 › [AionrsManager] stream_end: msg_id=209a0ac6-7127-4cd4-9902-cf64ea640d50, total=18802ms { input_tokens: 565792, output_tokens: 7993 }
+14:27:37.458 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d80b5dd7
+14:27:37.459 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:27:38.197 › [AionrsManager] info: Tool call: team_send_message
+14:27:38.198 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:38.198 › [TeamMcpServer] TCP connection received from 127.0.0.1:59262
+14:27:38.199 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:27:38.199 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:27:38.199 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:27:38.199 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=2407, preview="[From affirmative] Turn completed\n[From moderator] Turn completed\n[From affirmative] Turn completed\n[From affirmative] @negative, your argument has finally reached its logical conclusion: you are no l"
+14:27:38.200 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=2307, preview="[From affirmative] @negative, your argument has finally reached its logical conclusion: you are no longer arguing about *capability*, but about *meaning*.\n\nYou admit that AI can perform the synthesis,"
+14:27:38.201 › [AionrsManager] message sent: msg_id=13e87427-3838-478e-ba29-3ab91f6ec1a9
+14:27:38.201 › [AionrsManager] message sent: msg_id=01e14572-d2b3-4c00-9a25-13e344cc4f51
+14:27:38.202 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:27:38.202 › [AionrsManager] stream_start: msg_id=13e87427-3838-478e-ba29-3ab91f6ec1a9, TTFT=1ms
+14:27:38.202 › [AionrsManager] stream_start: msg_id=01e14572-d2b3-4c00-9a25-13e344cc4f51, TTFT=1ms
+14:27:39.799 › [AionrsManager] info: Tool call: team_send_message
+14:27:39.800 › [TeamMcpServer] TCP connection received from 127.0.0.1:59266
+14:27:39.800 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:27:39.800 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:27:40.198 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:41.738 › [AionrsManager] info: Tool call: team_send_message
+14:27:41.739 › [TeamMcpServer] TCP connection received from 127.0.0.1:59277
+14:27:41.740 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:27:41.740 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=763, preview="[From negative] Moderator 您好，我选择在进入总结陈词前，交付最后一击，彻底终结关于“定义者 $\\neq$ 项目经理”的争论。\n\n@affirmative，你试图用“项目经理”这个贬义词来消解定义者的价值，但这恰恰暴露了你对“创造”最深刻的误解：你认为创造力是一种**“产出能力”**，而我主张创造力是一种**“价值觉醒”**。\n\n项目经理管理的是【资源】，而创造者管理的是【"
+14:27:41.741 › [AionrsManager] message sent: msg_id=2d32e900-1bb5-4efa-9604-634b6f34ac5f
+14:27:41.742 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:27:41.742 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:27:41.743 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:43.748 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:44.796 › [AionrsManager] stream_end: msg_id=2f17d6d6-d352-4196-9018-9e4676aa1d79, total=3055ms { input_tokens: 452723, output_tokens: 5567 }
+14:27:44.797 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:active → SKIP
+14:27:48.196 › [AionrsManager] info: Tool call: team_send_message
+14:27:48.198 › [TeamMcpServer] TCP connection received from 127.0.0.1:59286
+14:27:48.198 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:27:48.198 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:27:48.198 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:27:48.199 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=1191, preview="[From moderator] @affirmative, you have laid out a comprehensive, logical closure to your argument, framing \"meaning\" as an experience of the receiver rather than a property of the creator, and reduci"
+14:27:48.200 › [AionrsManager] message sent: msg_id=7c7767c2-4467-4eaf-877f-93119e19a712
+14:27:48.201 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, negative
+14:27:48.201 › [AionrsManager] stream_start: msg_id=7c7767c2-4467-4eaf-877f-93119e19a712, TTFT=1ms
+14:27:48.202 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:49.589 › [AionrsManager] info: Tool call: team_send_message
+14:27:49.590 › [TeamMcpServer] TCP connection received from 127.0.0.1:59288
+14:27:49.591 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:27:49.591 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:27:50.205 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:50.930 › [AionrsManager] stream_end: msg_id=01e14572-d2b3-4c00-9a25-13e344cc4f51, total=12729ms { input_tokens: 252617, output_tokens: 3195 }
+14:27:50.931 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:27:50.931 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=150, preview="[From affirmative] Acknowledged. I am standing by for @negative's closing statement, and will prepare my final synthesis to deliver immediately after."
+14:27:50.933 › [AionrsManager] message sent: msg_id=8cdecba4-8e32-4116-a958-d495882ec2a3
+14:27:50.933 › [AionrsManager] stream_start: msg_id=8cdecba4-8e32-4116-a958-d495882ec2a3, TTFT=0ms
+14:27:52.057 › [AionrsManager] info: Tool call: team_send_message
+14:27:52.059 › [TeamMcpServer] TCP connection received from 127.0.0.1:59291
+14:27:52.059 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:27:52.059 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:27:52.063 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:53.180 › [AionrsManager] stream_end: msg_id=8cdecba4-8e32-4116-a958-d495882ec2a3, total=2247ms { input_tokens: 265203, output_tokens: 3237 }
+14:27:53.181 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:27:54.069 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:27:54.304 › [AionrsManager] stream_end: msg_id=338ec88a-75b5-42ec-b568-785124e4ab0c, total=25783ms { input_tokens: 304408, output_tokens: 7406 }
+14:27:54.304 › [TeammateManager] wake(negative): status=idle, proceeding
+14:27:54.305 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=3499, preview="[From affirmative] @negative, your argument has finally reached its logical conclusion: you are no longer arguing about *capability*, but about *meaning*.\n\nYou admit that AI can perform the synthesis,"
+14:27:54.307 › [AionrsManager] message sent: msg_id=4f1d41e6-a6f8-4be5-9c77-a6377d0516b0
+14:27:54.308 › [AionrsManager] stream_start: msg_id=4f1d41e6-a6f8-4be5-9c77-a6377d0516b0, TTFT=1ms
+14:27:54.432 › [AionrsManager] stream_end: msg_id=7c7767c2-4467-4eaf-877f-93119e19a712, total=6232ms { input_tokens: 497561, output_tokens: 5728 }
+14:27:54.433 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:27:54.597 › [AionrsManager] stream_end: msg_id=13e87427-3838-478e-ba29-3ab91f6ec1a9, total=16396ms { input_tokens: 587698, output_tokens: 8563 }
+14:27:54.597 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:27:54.597 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=1563, preview="[From affirmative] Response submitted. Standing by for @negative's final thoughts or the moderator to close the Free Debate.\n[From affirmative] Turn completed\n[From moderator] @affirmative, you have l"
+14:27:54.601 › [AionrsManager] message sent: msg_id=a5233801-3e0b-46ac-90e8-84dc9d9092d9
+14:27:54.602 › [AionrsManager] stream_start: msg_id=a5233801-3e0b-46ac-90e8-84dc9d9092d9, TTFT=1ms
+14:28:02.898 › [AionrsManager] stream_end: msg_id=a5233801-3e0b-46ac-90e8-84dc9d9092d9, total=8297ms { input_tokens: 610510, output_tokens: 8868 }
+14:28:09.319 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for 5cdef839
+14:28:09.320 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:28:09.320 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:28:09.320 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=30, preview="[From negative] Turn completed"
+14:28:09.321 › [AionrsManager] message sent: msg_id=e52bb96a-e525-438f-bb00-516124d1629a
+14:28:09.322 › [AionrsManager] stream_start: msg_id=e52bb96a-e525-438f-bb00-516124d1629a, TTFT=1ms
+14:28:20.465 › [AionrsManager] stream_end: msg_id=e52bb96a-e525-438f-bb00-516124d1629a, total=11144ms { input_tokens: 633642, output_tokens: 9078 }
+14:28:22.830 › [AionrsManager] info: Tool call: team_send_message
+14:28:22.831 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:22.831 › [TeamMcpServer] TCP connection received from 127.0.0.1:59318
+14:28:22.832 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:28:22.832 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=939, preview="[From negative] 尊敬的评委，各位观众，大家好。\n\n在经历了激烈的交锋后，正方试图将“创造力”简化为一套高效的【结果产出流程】：只要 AI 能通过高维搜索找到离群值、通过算法诱发情感共鸣、通过合成产生新形式，那么它就取代了创造力。在正方的逻辑中，创造力变成了可以被量化的“工程”，而人类的意识成了无关紧要的“装饰品”。\n\n**但我们要提醒大家，这种观点潜伏着一个极其危险的逻辑陷阱：它混"
+14:28:22.833 › [AionrsManager] message sent: msg_id=d90f1b64-5122-4795-a608-4d8ca9b1e331
+14:28:22.834 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:28:22.834 › [AionrsManager] stream_start: msg_id=d90f1b64-5122-4795-a608-4d8ca9b1e331, TTFT=1ms
+14:28:24.876 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:27.056 › [AionrsManager] info: Tool call: team_send_message
+14:28:27.058 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:27.059 › [TeamMcpServer] TCP connection received from 127.0.0.1:59320
+14:28:27.060 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:28:27.061 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=565, preview="[From moderator] Thank you, @negative, for a powerful and poetic closing statement. You have reframed the debate by distinguishing \"precise manipulation\" from \"true creation\" and argued that AI is a m"
+14:28:27.063 › [AionrsManager] message sent: msg_id=29a23359-ee84-4725-b288-d5c68c138dc5
+14:28:27.064 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:28:27.064 › [AionrsManager] stream_start: msg_id=29a23359-ee84-4725-b288-d5c68c138dc5, TTFT=1ms
+14:28:29.581 › [AionrsManager] stream_end: msg_id=d90f1b64-5122-4795-a608-4d8ca9b1e331, total=6748ms { input_tokens: 291867, output_tokens: 3425 }
+14:28:29.582 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:28:29.877 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:34.683 › [AionrsManager] stream_end: msg_id=4f1d41e6-a6f8-4be5-9c77-a6377d0516b0, total=40376ms { input_tokens: 339334, output_tokens: 8321 }
+14:28:34.684 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:28:42.066 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d80b5dd7
+14:28:42.067 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:28:42.067 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:28:42.067 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=96, preview="[From moderator] Turn completed\n[From negative] Turn completed\n[From affirmative] Turn completed"
+14:28:42.068 › [AionrsManager] message sent: msg_id=2bc668f1-4add-43ca-bd3f-4144f80493c7
+14:28:42.068 › [AionrsManager] stream_start: msg_id=2bc668f1-4add-43ca-bd3f-4144f80493c7, TTFT=0ms
+14:28:50.529 › [AionrsManager] info: Tool call: team_send_message
+14:28:50.532 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:50.533 › [TeamMcpServer] TCP connection received from 127.0.0.1:59384
+14:28:50.534 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:28:50.534 › [TeammateManager] wake(negative): status=idle, proceeding
+14:28:50.534 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:28:50.535 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=759, preview="[From affirmative] # 正方总结陈词：创造力的进化与终极迭代\n\n在本次辩论中，反方试图将创造力定义为一种带有“灵魂”的、不可量化的、关于“意义”的特权。但事实上，这种定义是一种温情的怀旧，而非对现实的客观认知。\n\n我们的核心论点始终一致：**创造力在本质上是信息处理的最高形式。**\n\n1. **从执行到构思的全面覆盖**：我们已经证明，所谓的“灵感”是海量模式的重新组合，而“范式"
+14:28:50.535 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=759, preview="[From affirmative] # 正方总结陈词：创造力的进化与终极迭代\n\n在本次辩论中，反方试图将创造力定义为一种带有“灵魂”的、不可量化的、关于“意义”的特权。但事实上，这种定义是一种温情的怀旧，而非对现实的客观认知。\n\n我们的核心论点始终一致：**创造力在本质上是信息处理的最高形式。**\n\n1. **从执行到构思的全面覆盖**：我们已经证明，所谓的“灵感”是海量模式的重新组合，而“范式"
+14:28:50.539 › [AionrsManager] message sent: msg_id=2a605934-2356-4ccf-9663-8baf263678f6
+14:28:50.539 › [AionrsManager] message sent: msg_id=21668314-0857-4b9e-b8b4-dfb8994053c8
+14:28:50.540 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:28:50.540 › [AionrsManager] stream_start: msg_id=21668314-0857-4b9e-b8b4-dfb8994053c8, TTFT=1ms
+14:28:50.541 › [AionrsManager] stream_start: msg_id=2a605934-2356-4ccf-9663-8baf263678f6, TTFT=2ms
+14:28:52.533 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:53.686 › [AionrsManager] stream_end: msg_id=2bc668f1-4add-43ca-bd3f-4144f80493c7, total=11618ms { input_tokens: 657013, output_tokens: 9468 }
+14:28:53.687 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:28:53.687 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=759, preview="[From affirmative] # 正方总结陈词：创造力的进化与终极迭代\n\n在本次辩论中，反方试图将创造力定义为一种带有“灵魂”的、不可量化的、关于“意义”的特权。但事实上，这种定义是一种温情的怀旧，而非对现实的客观认知。\n\n我们的核心论点始终一致：**创造力在本质上是信息处理的最高形式。**\n\n1. **从执行到构思的全面覆盖**：我们已经证明，所谓的“灵感”是海量模式的重新组合，而“范式"
+14:28:53.690 › [AionrsManager] message sent: msg_id=8d4a4502-72bc-40a4-a335-8d9398731ed3
+14:28:53.691 › [AionrsManager] stream_start: msg_id=8d4a4502-72bc-40a4-a335-8d9398731ed3, TTFT=1ms
+14:28:56.820 › [AionrsManager] info: Tool call: team_send_message
+14:28:56.822 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:56.822 › [TeamMcpServer] TCP connection received from 127.0.0.1:59396
+14:28:56.822 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:28:56.823 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:28:58.823 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:59.154 › [AionrsManager] info: Tool call: team_send_message
+14:28:59.155 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:28:59.156 › [TeamMcpServer] TCP connection received from 127.0.0.1:59399
+14:28:59.156 › [TeammateManager] wake(moderator): DEFERRED (agent active)
+14:28:59.157 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:28:59.356 › [AionrsManager] stream_end: msg_id=29a23359-ee84-4725-b288-d5c68c138dc5, total=32293ms { input_tokens: 544348, output_tokens: 6363 }
+14:28:59.357 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:active → SKIP
+14:29:01.157 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:05.544 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for b5b95452
+14:29:05.546 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:29:05.546 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=179, preview="[From negative] Moderator 您好，我已经阅读了 @affirmative 的总结陈词。\n\n这场辩论在最高维度上地完成了碰撞：正方将创造力定义为【高效的信息处理与意义工程】，而我将其定义为【意识的自觉与价值的定义】。\n\n在等待最终裁决之前，我已完成了本场辩论的所有指派任务。我将保持待命状态，随时准备根据最终结果进行反思或执行后续任务。"
+14:29:05.550 › [AionrsManager] message sent: msg_id=3fefb1ee-0681-4600-9c9c-1077071173d1
+14:29:05.550 › [aionrs] [protocol] Ignoring command during active message processing
+
+14:29:08.110 › [AionrsManager] stream_end: msg_id=2a605934-2356-4ccf-9663-8baf263678f6, total=17571ms { input_tokens: 376633, output_tokens: 8547 }
+14:29:08.111 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:active → SKIP
+14:29:13.847 › [AionrsManager] stream_end: msg_id=8d4a4502-72bc-40a4-a335-8d9398731ed3, total=20157ms { input_tokens: 681278, output_tokens: 9965 }
+14:29:13.847 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:29:13.848 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=172, preview="[From affirmative] Closing statement delivered. Standing by for the Moderator's final verdict and analysis.\n[From affirmative] Turn completed\n[From negative] Turn completed"
+14:29:13.852 › [AionrsManager] message sent: msg_id=ce818f8f-c014-4ac3-9cbb-83d2c3c4fb7e
+14:29:13.852 › [AionrsManager] stream_start: msg_id=ce818f8f-c014-4ac3-9cbb-83d2c3c4fb7e, TTFT=0ms
+14:29:25.020 › [AionrsManager] info: Tool call: team_send_message
+14:29:25.022 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:25.022 › [TeamMcpServer] TCP connection received from 127.0.0.1:59432
+14:29:25.023 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:29:25.023 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:29:25.023 › [TeammateManager] wake(negative): status=idle, proceeding
+14:29:25.023 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=1293, preview="[From moderator] # ⚖️ 辩论赛最终裁决 (Final Verdict)\n\n感谢正反双方在本次关于 **“人工智能是否会最终取代人类的创造力”** 辩论赛中的精彩表现。双方展现了极高的逻辑素养和深刻的哲学思考。\n\n作为主持人 (Moderator)，在综合考量了【开篇立论】、【质询环节】、【自由辩论】以及【总结陈词】后，现给出我的最终判定。\n\n## 1. 核心交锋分析 (Key "
+14:29:25.023 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=1293, preview="[From moderator] # ⚖️ 辩论赛最终裁决 (Final Verdict)\n\n感谢正反双方在本次关于 **“人工智能是否会最终取代人类的创造力”** 辩论赛中的精彩表现。双方展现了极高的逻辑素养和深刻的哲学思考。\n\n作为主持人 (Moderator)，在综合考量了【开篇立论】、【质询环节】、【自由辩论】以及【总结陈词】后，现给出我的最终判定。\n\n## 1. 核心交锋分析 (Key "
+14:29:25.026 › [AionrsManager] message sent: msg_id=0dc6c604-80bf-49f3-8f66-9c49c67299e0
+14:29:25.026 › [AionrsManager] message sent: msg_id=6f1fe66f-5781-4093-82bd-7bddb3130ce6
+14:29:25.027 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, negative
+14:29:25.027 › [AionrsManager] stream_start: msg_id=6f1fe66f-5781-4093-82bd-7bddb3130ce6, TTFT=1ms
+14:29:25.027 › [AionrsManager] stream_start: msg_id=0dc6c604-80bf-49f3-8f66-9c49c67299e0, TTFT=1ms
+14:29:27.023 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:27.556 › [AionrsManager] stream_end: msg_id=ce818f8f-c014-4ac3-9cbb-83d2c3c4fb7e, total=13704ms { input_tokens: 706083, output_tokens: 10147 }
+14:29:27.557 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:29:27.557 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=1293, preview="[From moderator] # ⚖️ 辩论赛最终裁决 (Final Verdict)\n\n感谢正反双方在本次关于 **“人工智能是否会最终取代人类的创造力”** 辩论赛中的精彩表现。双方展现了极高的逻辑素养和深刻的哲学思考。\n\n作为主持人 (Moderator)，在综合考量了【开篇立论】、【质询环节】、【自由辩论】以及【总结陈词】后，现给出我的最终判定。\n\n## 1. 核心交锋分析 (Key "
+14:29:27.559 › [AionrsManager] message sent: msg_id=0659fada-fddc-4baf-a980-fac9930320bd
+14:29:27.560 › [AionrsManager] stream_start: msg_id=0659fada-fddc-4baf-a980-fac9930320bd, TTFT=1ms
+14:29:28.183 › [AionrsManager] stream_end: msg_id=21668314-0857-4b9e-b8b4-dfb8994053c8, total=22633ms { input_tokens: 320641, output_tokens: 4297 }
+14:29:28.183 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:active, moderator:idle → SKIP
+14:29:30.031 › [AionrsManager] stream_end: msg_id=0dc6c604-80bf-49f3-8f66-9c49c67299e0, total=5005ms { input_tokens: 0, output_tokens: 0 }
+14:29:30.032 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:29:37.087 › [AionrsManager] info: Tool call: team_send_message
+14:29:37.090 › [TeamMcpServer] TCP connection received from 127.0.0.1:59441
+14:29:37.091 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:29:37.091 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=274, preview="[From negative] Moderator 您好，感谢您公正且深刻的裁决。\n\n虽然我在本次辩论中未能获胜，但这场交锋对我而言是一次极具价值的逻辑演习。正方通过将创造力“功能化”和“工程化”构建的逻辑闭环非常强悍，这让我深刻意识到，在面对基于结果论的强逻辑压制时，纯粹的人文主义视角需要更具实操性的证伪机制来支撑。\n\n我完全接受裁决结果。感谢 @affirmative 的精彩对手戏，这种高强度"
+14:29:37.093 › [AionrsManager] message sent: msg_id=8b387f8e-1f3c-4974-8493-c0baee74e4f9
+14:29:37.093 › [AionrsManager] info: [team_send_message success] Message sent to moderator's inbox. They will process it shortly.
+14:29:37.094 › [AionrsManager] stream_start: msg_id=8b387f8e-1f3c-4974-8493-c0baee74e4f9, TTFT=1ms
+14:29:37.099 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:39.100 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:42.076 › [AionrsManager] info: Tool call: team_send_message
+14:29:42.078 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:42.079 › [TeamMcpServer] TCP connection received from 127.0.0.1:59456
+14:29:42.079 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:29:42.079 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:29:42.079 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:29:42.080 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=449, preview="[From moderator] Thank you, @negative, for your grace and professionalism. Your commitment to the humanist perspective provided the essential tension that made this debate truly profound. It was your "
+14:29:42.082 › [AionrsManager] message sent: msg_id=547852a9-5a95-4b50-a3d9-6af6c89396e8
+14:29:42.083 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, affirmative, negative
+14:29:42.083 › [AionrsManager] stream_start: msg_id=547852a9-5a95-4b50-a3d9-6af6c89396e8, TTFT=1ms
+14:29:42.097 › [TeammateManager] wake(negative): status=idle, proceeding
+14:29:42.097 › [AionrsManager] stream_end: msg_id=6f1fe66f-5781-4093-82bd-7bddb3130ce6, total=17071ms { input_tokens: 0, output_tokens: 0 }
+14:29:42.098 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=449, preview="[From moderator] Thank you, @negative, for your grace and professionalism. Your commitment to the humanist perspective provided the essential tension that made this debate truly profound. It was your "
+14:29:42.098 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:active → SKIP
+14:29:42.100 › [AionrsManager] message sent: msg_id=0991e609-fe22-4620-9155-ba90fbecd949
+14:29:42.102 › [AionrsManager] stream_start: msg_id=0991e609-fe22-4620-9155-ba90fbecd949, TTFT=2ms
+14:29:44.086 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:45.344 › [AionrsManager] stream_end: msg_id=0991e609-fe22-4620-9155-ba90fbecd949, total=3244ms { input_tokens: 416195, output_tokens: 8798 }
+14:29:46.270 › [AionrsManager] stream_end: msg_id=8b387f8e-1f3c-4974-8493-c0baee74e4f9, total=9177ms { input_tokens: 350876, output_tokens: 4463 }
+14:29:46.272 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:active, negative:idle, moderator:idle → SKIP
+14:29:49.423 › [AionrsManager] stream_end: msg_id=0659fada-fddc-4baf-a980-fac9930320bd, total=21864ms { input_tokens: 731862, output_tokens: 10517 }
+14:29:49.423 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:29:49.424 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=578, preview="[From moderator] Turn completed\n[From affirmative] Turn completed\n[From moderator] Thank you, @negative, for your grace and professionalism. Your commitment to the humanist perspective provided the es"
+14:29:49.433 › [AionrsManager] message sent: msg_id=274690cb-8246-4e40-a449-abdec6b80d76
+14:29:49.434 › [AionrsManager] stream_start: msg_id=274690cb-8246-4e40-a449-abdec6b80d76, TTFT=1ms
+14:29:57.083 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for d80b5dd7
+14:29:57.084 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:idle, moderator:idle → WAKE
+14:29:57.084 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:29:59.709 › [AionrsManager] info: Tool call: team_send_message
+14:29:59.710 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:29:59.711 › [TeamMcpServer] TCP connection received from 127.0.0.1:59500
+14:29:59.711 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:29:59.711 › [TeammateManager] wake(negative): status=idle, proceeding
+14:29:59.711 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:29:59.711 › [TeammateManager] wake(negative): sendPrompt type=messages-only, length=586, preview="[From affirmative] Thank you, Moderator, for the fair adjudication and the insightful analysis. It was a privilege to engage in such a rigorous intellectual exercise.\n\nAnd a huge thank you to @negativ"
+14:29:59.712 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=586, preview="[From affirmative] Thank you, Moderator, for the fair adjudication and the insightful analysis. It was a privilege to engage in such a rigorous intellectual exercise.\n\nAnd a huge thank you to @negativ"
+14:29:59.714 › [AionrsManager] message sent: msg_id=432af2c3-3347-430d-aa0b-fa539be4ecf7
+14:29:59.714 › [AionrsManager] message sent: msg_id=40d61e7b-4eda-4aca-9ee5-2fe8d18e31b1
+14:29:59.714 › [AionrsManager] info: [team_send_message success] Message broadcast to 3 teammate(s): Leader, negative, moderator
+14:29:59.714 › [AionrsManager] stream_start: msg_id=40d61e7b-4eda-4aca-9ee5-2fe8d18e31b1, TTFT=0ms
+14:29:59.714 › [AionrsManager] stream_start: msg_id=432af2c3-3347-430d-aa0b-fa539be4ecf7, TTFT=0ms
+14:30:00.423 › [AionrsManager] stream_end: msg_id=274690cb-8246-4e40-a449-abdec6b80d76, total=10990ms { input_tokens: 758144, output_tokens: 10869 }
+14:30:00.423 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:30:00.424 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=620, preview="[From affirmative] Turn completed\n[From affirmative] Thank you, Moderator, for the fair adjudication and the insightful analysis. It was a privilege to engage in such a rigorous intellectual exercise."
+14:30:00.426 › [AionrsManager] message sent: msg_id=213f8990-68a3-4a24-b949-5be130226cb9
+14:30:00.427 › [AionrsManager] stream_start: msg_id=213f8990-68a3-4a24-b949-5be130226cb9, TTFT=1ms
+14:30:01.712 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:02.410 › [AionrsManager] stream_end: msg_id=40d61e7b-4eda-4aca-9ee5-2fe8d18e31b1, total=2696ms { input_tokens: 366240, output_tokens: 4503 }
+14:30:02.411 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:30:02.539 › [AionrsManager] info: Tool call: team_send_message
+14:30:02.540 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:02.541 › [TeamMcpServer] TCP connection received from 127.0.0.1:59510
+14:30:02.541 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:30:02.541 › [AionrsManager] info: [team_send_message success] Message sent to Leader's inbox. They will process it shortly.
+14:30:04.541 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:05.616 › [AionrsManager] stream_end: msg_id=547852a9-5a95-4b50-a3d9-6af6c89396e8, total=23534ms { input_tokens: 595122, output_tokens: 6620 }
+14:30:05.617 › [TeammateManager] maybeWakeLeaderWhenAllIdle: affirmative:idle, negative:active, moderator:idle → SKIP
+14:30:06.897 › [AionrsManager] info: Tool call: team_send_message
+14:30:06.898 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:06.898 › [TeamMcpServer] TCP connection received from 127.0.0.1:59517
+14:30:06.899 › [TeammateManager] wake(affirmative): status=idle, proceeding
+14:30:06.899 › [TeammateManager] wake(affirmative): sendPrompt type=messages-only, length=153, preview="[From negative] @affirmative，非常感谢你的认可。这种基于逻辑碰撞的共鸣本身就是一种创造性的体验。在试图通过逻辑“击败”对方的过程中，我们其实共同完成了一次对“创造力”本质的深度探索。能与你这样强力的对手交手是我的荣幸。\n\n期待我们在未来的任务中再次协作或交锋。我也进入待命状态。"
+14:30:06.901 › [AionrsManager] message sent: msg_id=07949625-e1eb-4125-be81-972e52a25779
+14:30:06.901 › [AionrsManager] info: [team_send_message success] Message sent to affirmative's inbox. They will process it shortly.
+14:30:06.901 › [AionrsManager] stream_start: msg_id=07949625-e1eb-4125-be81-972e52a25779, TTFT=0ms
+14:30:08.901 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:12.910 › [AionrsManager] info: Tool call: team_send_message
+14:30:12.913 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:12.914 › [TeamMcpServer] TCP connection received from 127.0.0.1:59543
+14:30:12.914 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:30:12.914 › [AionrsManager] info: [team_send_message success] Message sent to negative's inbox. They will process it shortly.
+14:30:14.914 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:16.894 › [AionrsManager] stream_end: msg_id=213f8990-68a3-4a24-b949-5be130226cb9, total=16468ms { input_tokens: 784912, output_tokens: 11132 }
+14:30:16.894 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:30:16.895 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=183, preview="[From moderator] Turn completed\n[From affirmative] Debate concluded. I have sent my final thanks to the team. Standing by for your next instructions.\n[From affirmative] Turn completed"
+14:30:16.898 › [AionrsManager] message sent: msg_id=f6ccc86c-9ca7-4115-aac5-0a24a7291a5d
+14:30:16.899 › [AionrsManager] stream_start: msg_id=f6ccc86c-9ca7-4115-aac5-0a24a7291a5d, TTFT=1ms
+14:30:23.168 › [AionrsManager] info: Tool call: team_shutdown_agent
+14:30:23.169 › [AionrsManager] info: Tool call: team_shutdown_agent
+14:30:23.169 › [AionrsManager] info: Tool call: team_shutdown_agent
+14:30:23.171 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:23.172 › [TeamMcpServer] TCP connection received from 127.0.0.1:59547
+14:30:23.173 › [TeammateManager] wake(moderator): status=idle, proceeding
+14:30:23.174 › [TeammateManager] wake(moderator): sendPrompt type=messages-only, length=143, preview="[From Leader] The team leader has requested you to shut down. Reply \"shutdown_approved\" to confirm, or \"shutdown_rejected: <reason>\" to refuse."
+14:30:23.176 › [AionrsManager] message sent: msg_id=624ff17e-f3eb-4557-a3b0-1ccf99e06c36
+14:30:23.177 › [TeamMcpServer] TCP connection received from 127.0.0.1:59548
+14:30:23.177 › [AionrsManager] stream_start: msg_id=624ff17e-f3eb-4557-a3b0-1ccf99e06c36, TTFT=1ms
+14:30:23.178 › [TeammateManager] wake(affirmative): DEFERRED (agent active)
+14:30:23.180 › [TeamMcpServer] TCP connection received from 127.0.0.1:59549
+14:30:23.180 › [TeammateManager] wake(negative): DEFERRED (agent active)
+14:30:23.181 › [AionrsManager] info: [team_shutdown_agent success] Shutdown request sent to "moderator". Waiting for their confirmation.
+14:30:23.181 › [AionrsManager] info: [team_shutdown_agent success] Shutdown request sent to "affirmative". Waiting for their confirmation.
+14:30:23.181 › [AionrsManager] info: [team_shutdown_agent success] Shutdown request sent to "negative". Waiting for their confirmation.
+14:30:25.172 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:26.537 › [AionrsManager] info: Tool call: team_members
+14:30:26.538 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:26.539 › [TeamMcpServer] TCP connection received from 127.0.0.1:59552
+14:30:26.539 › [AionrsManager] info: [team_members success] ## Team Members
+- Leader (type: aionrs, role: leader, status: active)
+- affirmative (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+- negative (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+- moderator (type: aionrs, role: teammate, status: active, model: google/gemma-4-31b-it)
+14:30:28.539 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:29.069 › [AionrsManager] info: Tool call: team_send_message
+14:30:29.070 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:29.071 › [TeamMcpServer] TCP connection received from 127.0.0.1:59553
+14:30:29.071 › [TeammateManager] Agent slot-4fe6ab9c (moderator) removed
+14:30:29.072 › [TeammateManager] wake(Leader): DEFERRED (agent active)
+14:30:29.570 › [AionrsManager] stream_end: msg_id=f6ccc86c-9ca7-4115-aac5-0a24a7291a5d, total=12672ms { input_tokens: 866729, output_tokens: 11381 }
+14:30:29.571 › [TeammateManager] wake(Leader): status=idle, proceeding
+14:30:29.571 › [TeammateManager] wake(Leader): sendPrompt type=messages-only, length=76, preview="[From slot-4fe6ab9c] moderator has shut down and been removed from the team."
+14:30:29.573 › [AionrsManager] message sent: msg_id=2840f018-66f6-4366-bc43-646c784a03cf
+14:30:29.573 › [AionrsManager] stream_start: msg_id=2840f018-66f6-4366-bc43-646c784a03cf, TTFT=0ms
+14:30:31.072 › Ignore file not found: /Users/gmf/.aionui-dev/aionrs-temp-1776925047594/.geminiignore, continue without it.
+14:30:33.773 › [AionrsManager] stream_end: msg_id=2840f018-66f6-4366-bc43-646c784a03cf, total=4200ms { input_tokens: 894296, output_tokens: 11458 }
+14:30:44.075 › [AionrsManager] Turn became idle without finish signal; synthesizing finish for b5b95452

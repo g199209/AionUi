@@ -114,7 +114,12 @@ class AcpAgentManager extends BaseAgentManager<AcpAgentManagerData, AcpPermissio
   private readonly completedTrackedTurnIds = new Set<number>();
   private missingFinishFallbackTimer: ReturnType<typeof setTimeout> | null = null;
   private missingFinishFallbackTurnId: number | null = null;
-  private readonly missingFinishFallbackDelayMs = 15000;
+  // HACK (2026-04): raised from 15_000ms to 9_999_000ms to unblock long-running
+  // team tasks. See docs/research/team-timer-design-flaw.md — same root cause
+  // as AionrsManager: timer-based silence detection cannot distinguish silent
+  // thinking from a stuck session, so any threshold short enough to catch real
+  // hangs also mis-fires on long reasoning turns.
+  private readonly missingFinishFallbackDelayMs = 9_999_000;
   /** True while `agent.sendMessage()` is awaiting (prompt in flight).
    *  The idle-finish fallback timer is suppressed during this window because
    *  long tool-call gaps (>15 s) between stream events are normal and do not
