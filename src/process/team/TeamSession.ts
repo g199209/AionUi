@@ -197,8 +197,12 @@ export class TeamSession extends EventEmitter {
 
   /** Rename an agent and persist to DB */
   renameAgent(slotId: string, newName: string): void {
+    const previousName = this.teammateManager.getAgents().find((a) => a.slotId === slotId)?.agentName;
     this.teammateManager.renameAgent(slotId, newName);
-    void this.repo.update(this.teamId, { agents: this.teammateManager.getAgents(), updatedAt: Date.now() });
+
+    void this.persistRename(previousName, newName.trim()).catch((err) => {
+      console.error(`[TeamSession] Failed to persist rename for ${slotId}:`, err);
+    });
   }
 
   /** Add a new agent to the team at runtime */
@@ -214,6 +218,21 @@ export class TeamSession extends EventEmitter {
   /** Get current agent states */
   getAgents(): TeamAgent[] {
     return this.teammateManager.getAgents();
+  }
+
+  private async persistRename(previousName: string | undefined, newName: string): Promise<void> {
+    await this.repo.update(this.teamId, { agents: this.teammateManager.getAgents(), updatedAt: Date.now() });
+
+    if (!previousName || previousName === newName) return;
+
+    const ownedTasks = await this.taskManager.getByOwner(this.teamId, previousName);
+    for (const task of ownedTasks) {
+      try {
+        await this.taskManager.update(task.id, { owner: newName });
+      } catch (err) {
+        console.error(`[TeamSession] Failed to sync renamed owner for task ${task.id}:`, err);
+      }
+    }
   }
 
   /**
